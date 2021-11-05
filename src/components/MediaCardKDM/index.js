@@ -9,22 +9,22 @@ import Typography from '@mui/material/Typography';
 
 
 
-export default function MediaCardWarhammer() {
+export default function MediaCardKDM() {
   return (
     <Card sx={4}>
        <CardMedia
         component="img"
         height="400"
-        image="./assets/images/AssaultIntercessor.jpg"
+        image="./assets/images/ParadeDaemonPrince1.jpg"
         alt="green iguana"
       /> 
-      {/* <Image src="./assets/images/AssaultIntercessor.jpg" /> */}
+     
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-         Warhammer 40k
+          Kingdom Death: Monster
         </Typography>
         <Typography variant="body2" color="text.secondary">
-         A bleak future, where there is only war. 
+          A dark world as imagined by Adam Poots. Visually stunning models combined with a aspect of nightmare horror
         </Typography>
       </CardContent>
       <CardActions>

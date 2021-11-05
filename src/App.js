@@ -18,9 +18,30 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@emotion/react';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      light: '#fafafa',
+      main: '#ffb300',
+      dark: '#fafafa',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#ff7961',
+      main: '#f44336',
+      dark: '#ba000d',
+      contrastText: '#000',
+    },
+  },
+});
+
 
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <Router>
     <div className="App">
         <Header/>
@@ -63,6 +84,7 @@ function App() {
         </div>
     </div>
     </Router>
+    </ThemeProvider>
   );
 }
 
