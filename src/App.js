@@ -10,6 +10,7 @@ import './App.css';
 import Header from './components/Header'
 import Home from './pages/Home';
 import About from './pages/About';
+import Gallery from './pages/Gallery';
 import ButtonAppBar from './components/Appbar';
 
 import AppBar from '@mui/material/AppBar';
@@ -62,6 +63,7 @@ function App() {
          
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/">Home</Button>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/About">About</Button>
+          <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Gallery">Gallery</Button>
           {/* <Button onClick={handleChange} color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} to={"/Gallery"}>Gallery</Button>
           <Button onClick={refreshPage} color="inherit" variant="h6" component="div" sx={{ flexGrow: 1 }}>Tutorials</Button>
           <Button onClick={refreshPage} color="inherit" variant="h6" component="div" sx={{ flexGrow: 1 }}>Articles</Button>
@@ -79,6 +81,9 @@ function App() {
             </Route>
             <Route  exact path="/About">
               <About />
+            </Route>
+            <Route  exact path="/Gallery">
+              <Gallery />
             </Route>
           </Switch>
         </div>
