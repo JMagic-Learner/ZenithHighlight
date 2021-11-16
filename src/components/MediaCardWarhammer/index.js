@@ -5,12 +5,15 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
+
 
 
 
 
 export default function MediaCardWarhammer() {
   return (
+    
     <Card sx={4}>
        <CardMedia
         component="img"
@@ -28,8 +31,13 @@ export default function MediaCardWarhammer() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" sx={{ mx: "auto" }} >Learn More</Button>
+        
+      <Button size="small" sx={{ mx: "auto" }} >
+      <Link margin="auto" to="/Warhammer"> Learn More</Link>
+       </Button>
+        
       </CardActions>
     </Card>
+    
   );
 }

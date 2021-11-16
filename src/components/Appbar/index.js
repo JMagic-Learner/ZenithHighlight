@@ -42,6 +42,7 @@ export default function ButtonAppBar() {
           <Link to="/">Home</Link>
           <Link to="/About"> About </Link>
           <Link to="/Gallery"> About </Link>
+          <Link to="/Articles"> Articles </Link>
           {/* <Button onClick={handleChange} color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} to={"/About"}>About</Button>
           <Button onClick={handleChange} color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} to={"/Gallery"}>Gallery</Button>
           <Button onClick={refreshPage} color="inherit" variant="h6" component="div" sx={{ flexGrow: 1 }}>Tutorials</Button>

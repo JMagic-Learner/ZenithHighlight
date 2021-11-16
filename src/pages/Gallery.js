@@ -58,29 +58,29 @@ const itemData = [
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-    title: 'Basketball',
+    img: '../assets/images/DaoFeiExample.jpeg',
+    title: 'DaoFeiExample',
   },
   {
-    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
+    img: '../assets/images/ParadeDaemonPrince1.jpg',
     title: 'Fern',
   },
   {
-    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
+    img: '../assets/images/Banner3.jpg',
     title: 'Mushrooms',
     rows: 2,
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-    title: 'Tomato basil',
+    img: '../assets/images/JujakExample.jpeg',
+    title: 'Jujak',
   },
   {
-    img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
+    img: '../assets/images/Leviathan.jpg',
     title: 'Sea star',
   },
   {
-    img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
+    img: '../assets/images/ChapterCommand1.JPG',
     title: 'Bike',
     cols: 2,
   },
@@ -112,7 +112,7 @@ export default function Gallery() {
   {itemData.map((item) => (
     <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
       <img
-        {...srcset(item.img, 121, item.rows, item.cols)}
+        {...srcset(item.img, 484, item.rows, item.cols)}
         alt={item.title}
         loading="lazy"
       />
