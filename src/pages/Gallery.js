@@ -58,7 +58,7 @@ const itemData = [
     cols: 2,
   },
   {
-    img: '../assets/images/DaoFeiExample.jpeg',
+    img: '../assets/images/DaofeiExample.jpeg',
     title: 'DaoFeiExample',
   },
   {
