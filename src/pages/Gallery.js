@@ -37,7 +37,7 @@ const itemData = [
     title: 'Intercessor',
   },
   {
-    img: '../assets/images/YujingRoster2.jpg',
+    img: '../assets/images/yujing.jpg',
     title: 'Yujing Roster',
   },
   {
@@ -51,7 +51,7 @@ const itemData = [
     cols: 2,
   },
   {
-    img: '../assets/images/Outriders8.jpg',
+    img: '../assets/images/outriders.jpg',
     title: 'Bikers',
     author: '@arwinneil',
     rows: 2,
