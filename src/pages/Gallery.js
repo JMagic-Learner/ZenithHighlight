@@ -80,7 +80,7 @@ const itemData = [
     title: 'Sea star',
   },
   {
-    img: '../assets/images/ChapterCommand1.JPG',
+    img: '../assets/images/ChapterCommand1.jpg',
     title: 'Bike',
     cols: 2,
   },
