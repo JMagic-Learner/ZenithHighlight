@@ -14,6 +14,7 @@ import Gallery from './pages/Gallery';
 import ButtonAppBar from './components/Appbar';
 import Warhammer from './pages/Warhammer40k';
 import Articles from './pages/Articles';
+import Article1 from './pages/Article1';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -93,6 +94,9 @@ function App() {
             </Route>
             <Route exact path="/Articles">
               <Articles  />
+            </Route>
+            <Route exact path="/Article1">
+              <Article1 />
             </Route>
           </Switch>
         </div>
