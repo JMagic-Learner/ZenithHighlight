@@ -1,16 +1,12 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
+
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
+
 
 import { Typography } from '@mui/material';
 
 //Image Components
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+
 
 import Image from '../assets/images/BloodAngelsLineup.jpg';
 import ImageList from '@mui/material/ImageList';

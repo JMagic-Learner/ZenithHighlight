@@ -23,6 +23,8 @@ import ButtonAppBar from './components/Appbar';
 import Warhammer from './pages/Warhammer40k';
 import Articles from './pages/Articles';
 import Article1 from './pages/Article1';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -56,6 +58,8 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
+
+
 
 const theme = createTheme({
   palette: {
@@ -101,6 +105,8 @@ function App() {
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/About">About</Button>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Gallery">Gallery</Button>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Articles">Articles</Button>
+          <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Login">Login</Button>
+          <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Signup">Signup</Button>
           {/* <Button onClick={handleChange} color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} to={"/Gallery"}>Gallery</Button>
           <Button onClick={refreshPage} color="inherit" variant="h6" component="div" sx={{ flexGrow: 1 }}>Tutorials</Button>
           <Button onClick={refreshPage} color="inherit" variant="h6" component="div" sx={{ flexGrow: 1 }}>Articles</Button>
@@ -130,6 +136,12 @@ function App() {
             </Route>
             <Route exact path="/Article1">
               <Article1 />
+            </Route>
+            <Route exact path="/Login">
+              <Login />
+            </Route>
+            <Route exact path="/Signup">
+              <Signup />
             </Route>
           </Switch>
         </div>

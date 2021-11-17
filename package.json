@@ -24,6 +24,7 @@
     "@mui/styled-engine-sc": "^5.0.3",
     "dotenv": "^10.0.0",
     "moment": "^2.29.1",
+    "mongodb": "^4.1.4",
     "react-bootstrap": "^1.6.4",
     "styled-components": "^5.3.1"
   },
