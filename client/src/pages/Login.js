@@ -22,6 +22,7 @@ const Login = (props) => {
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    console.log('You have submited a login attempt');
     console.log(formState);
     try {
       const { data } = await login({
