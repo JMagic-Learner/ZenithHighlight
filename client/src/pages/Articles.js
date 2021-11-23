@@ -35,9 +35,11 @@ export default function Articles() {
               }
               if(element.createdAt) {
                 console.log("A timestamp for the article has been detected");
+                console.log("The timestamp is: " + element.createdAt);
               }
               if(element.articleTitle) {
                 console.log("A title for the article has been detected");
+                console.log("The title is: " + element.articleTitle);
               }
               <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
                 <Item> {element.createdAt}</Item>
