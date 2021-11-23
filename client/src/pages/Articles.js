@@ -42,8 +42,9 @@ export default function Articles() {
                 console.log("The title is: " + element.articleTitle);
               }
               <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
-                <Item> {element.createdAt}</Item>
-                <Item> {element._id}</Item>
+                <p id={element._id}>{element._id}</p>
+                <p id={element.createdAt}> {element.createdAt} </p>
+                <p> {element.articleTitle} </p>
                 <Item>
                 <Link to="/Article1" >
                 <Typography variant="h6">
