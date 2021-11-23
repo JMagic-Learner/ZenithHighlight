@@ -28,14 +28,14 @@ export default function Articles() {
             <Typography sx={{ p: 2.0 }} variant="h2"> Articles</Typography>
             <Grid container spacing={2}>
 
-            {articles.map((element) => {
+            {articles.map((articles) => {
               <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
-                <Item> {element.createdAt}</Item>
-                <Item> {element._id}</Item>
+                <Item> {articles.createdAt}</Item>
+                <Item> {articles._id}</Item>
                 <Item>
                 <Link to="/Article1" >
                 <Typography variant="h6">
-                {element.articleTitle}
+                {articles.articleTitle}
                 </Typography>
                 </Link>
                 </Item>
