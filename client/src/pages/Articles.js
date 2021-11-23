@@ -30,6 +30,9 @@ export default function Articles() {
             <Grid container spacing={2}>
 
             {ArticlesArray.map((element) => {
+              if(element) {
+              console.log("element has been detected")
+              }
               <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
                 <Item> {element.createdAt}</Item>
                 <Item> {element._id}</Item>
