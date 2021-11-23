@@ -29,7 +29,9 @@ export default function Articles() {
             <Typography sx={{ p: 2.0 }} variant="h2"> Articles</Typography>
             <Grid container spacing={2}>
 
-            {ArticlesArray.map((element) => {
+           
+              <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
+              {ArticlesArray.map((element) => {
               if(element) {
               console.log("element has been detected")
               }
@@ -41,20 +43,18 @@ export default function Articles() {
                 console.log("A title for the article has been detected");
                 console.log("The title is: " + element.articleTitle);
               }
-              <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
-                <p id={element._id}>{element._id}</p>
-                <p id={element.createdAt}> {element.createdAt} </p>
-                <p> {element.articleTitle} </p>
                 <Item>
+                <Typography> {element.createdAt} </Typography>
+                <Typography> {element.articleTitle} </Typography>
                 <Link to="/Article1" >
-                <Typography variant="h6">
-                {element.articleTitle}
-                </Typography>
+                <Typography variant="h6"> {element.articleTitle}</Typography>
                 </Link>
                 </Item>
+               
+                  })
+                }
               </Grid>
-            })
-          }
+          
               <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
                 <Item>Test</Item>
               </Grid>
