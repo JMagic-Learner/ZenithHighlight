@@ -23,6 +23,7 @@ export default function Articles() {
   }
   const ArticlesArray = data?.articles || [];
   console.log(ArticlesArray);
+  console.log(ArticlesArray[0].articleTitle);
     return(
 
           <Box sx={{ flexGrow: 1 }}>
