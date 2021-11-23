@@ -43,6 +43,7 @@ export default function Articles() {
                 console.log("A title for the article has been detected");
                 console.log("The title is: " + element.articleTitle);
               }
+              return(
                 <Item>
                 <Typography> {element.createdAt} </Typography>
                 <Typography> {element.articleTitle} </Typography>
@@ -50,7 +51,7 @@ export default function Articles() {
                 <Typography variant="h6"> {element.articleTitle}</Typography>
                 </Link>
                 </Item>
-               
+              );
                   })
                 }
               </Grid>
