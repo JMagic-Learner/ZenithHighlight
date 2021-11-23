@@ -18,6 +18,9 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Articles() {
   const { loading, data } = useQuery(QUERY_ARTICLES);
+  if (data) {
+    console.log('We have succesfully queried articles');
+  }
   const articles = data?.articles || [];
     return(
 
