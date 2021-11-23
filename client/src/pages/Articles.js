@@ -21,7 +21,8 @@ export default function Articles() {
   if (data) {
     console.log('We have succesfully queried articles');
   }
-  const articles = data?.articles || [];
+  const ArticlesArray = data?.articles || [];
+  console.log(ArticlesArray);
     return(
 
           <Box sx={{ flexGrow: 1 }}>
