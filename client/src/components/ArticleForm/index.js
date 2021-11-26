@@ -43,8 +43,8 @@ const [articleTitle, setArticleTitle] = useState('');
          variables: {
            articleText1,
            articleText2,
-           articleTitle,
            articleAuthor: Auth.getProfile().data.username,
+           articleTitle,
          },
        });
        setArticleTitle('');
@@ -58,6 +58,10 @@ const [articleTitle, setArticleTitle] = useState('');
   const handleChange = (event) => {
      const { name, value } = event.target;
 
+     if (name === 'articleTitle' && value.length <= 200) {
+        setArticleTitle(value);
+          setCharacterCount(value.length);
+        }
     if (name === 'articleText1' && value.length <= 500) {
      setArticleText1(value);
        setCharacterCount(value.length);
@@ -125,11 +129,11 @@ const [articleTitle, setArticleTitle] = useState('');
                Add Article
               </button>
             </div>
-            {/* {error && (
+            {error && (
               <div className="col-12 my-3 bg-danger text-white p-3">
                 {error.message}
               </div>
-            )} */}
+            )}
           </form>
         </>
       ) : (
