@@ -89,7 +89,7 @@ const [articleTitle, setArticleTitle] = useState('');
           >
               <div className="col-12 col-lg-9">
               <textarea
-                name="articleText1"
+                name="articleTitle"
                 placeholder="Write the Title"
                 value={articleTitle}
                 className="form-input w-100"
