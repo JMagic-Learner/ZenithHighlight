@@ -24,6 +24,18 @@ export const ADD_USER = gql`
   }
 `;
 
+export const ADD_ARTICLE = gql`
+  mutation addArticle($articleAuthor: String!, $articleTitle: String!, $articleText1: String!, $articleText2: String!) {
+    addArticle(articleAuthor: $articleAuthor, articleTitle: $articleTitle, articleText1: $articleText1, articleText2: $articleText2) {
+      _id
+      articleAuthor
+      articleTitle
+      articleText1
+      articleText2
+      createdAt
+    }
+  }`
+
 // export const SAVE_EVENT = gql`
 //   mutation saveEvent($eventId: ID!) {
 //     saveEvent(eventId: $eventId) {

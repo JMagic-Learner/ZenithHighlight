@@ -20,6 +20,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
 import ButtonAppBar from './components/Appbar';
+import Publish from './pages/Publish.js';
 import Warhammer from './pages/Warhammer40k';
 import Articles from './pages/Articles';
 import Article1 from './pages/Article1';
@@ -113,6 +114,9 @@ function App() {
             </Route>
             <Route exact path="/Signup">
               <Signup />
+            </Route>
+            <Route exact path="/Publish">
+              <Publish />
             </Route>
           </Switch>
         </div>

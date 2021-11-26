@@ -39,6 +39,7 @@ const Header = () => {
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/About">About</Button>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Gallery">Gallery</Button>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Articles">Articles</Button>
+          <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Publish">Publish</Button>
           
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Signup">Signup</Button>
           {Auth.loggedIn() ? (

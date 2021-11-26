@@ -31,6 +31,10 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    addArticle: async (parent, {articleAuthor, articleTitle, articleText1, articleText2}) => {
+      const article = await Article.create({ articleAuthor, articleTitle, articleText1, articleText2 });
+      return article;
+    },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
