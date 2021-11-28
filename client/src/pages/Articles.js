@@ -56,10 +56,13 @@ export default function Articles() {
                 }
               </Grid>
           
-           
-              
-            </Grid>
-        
+
+               
+              </Grid>
+       
+            <Typography variant="h6">
+             Place Articles here
+           </Typography>
           </Box>
            
         );
