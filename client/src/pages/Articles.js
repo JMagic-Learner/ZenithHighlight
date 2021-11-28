@@ -56,19 +56,10 @@ export default function Articles() {
                 }
               </Grid>
           
-              <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
-                <Item>Test</Item>
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
-                <Item>Test</Item>
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
-                <Item>Test</Item>
-              </Grid>
+           
+              
             </Grid>
-            <Typography variant="h6">
-             Place Articles here
-           </Typography>
+        
           </Box>
            
         );
