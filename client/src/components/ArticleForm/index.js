@@ -108,7 +108,7 @@ const [articleTitle, setArticleTitle] = useState('');
               ></textarea>
             </div>
 
-            <div className="col-12 col-lg-9">
+            <div className="col-6 col-lg-9">
               <textarea
                 name="articleText1"
                 placeholder="Write the first / introductory paragraph"
@@ -119,7 +119,7 @@ const [articleTitle, setArticleTitle] = useState('');
               ></textarea>
             </div>
 
-            <div className="col-12 col-lg-9">
+            <div className="col-6 col-lg-9">
               <textarea
                 name="articleText2"
                 placeholder="Write the second/ concluding paragraph"
@@ -130,7 +130,7 @@ const [articleTitle, setArticleTitle] = useState('');
               ></textarea>
             </div>
 
-            <div className="col-12 col-lg-3">
+            <div className="col-6 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
                Add Article
               </button>
