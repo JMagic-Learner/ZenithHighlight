@@ -106,7 +106,7 @@ function App() {
             <Route exact path="/Articles">
               <Articles  />
             </Route>
-            <Route exact path="/Article1">
+            <Route exact path="/Article1/:articleId">
               <Article1 />
             </Route>
             <Route exact path="/Login">

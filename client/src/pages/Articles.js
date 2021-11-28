@@ -47,7 +47,7 @@ export default function Articles() {
                 <Item>
                 <Typography> {element.createdAt} </Typography>
                 <Typography> {element.articleTitle} </Typography>
-                <Link to="/Article1" >
+                <Link to={`/Article1/${element._id}`} >
                 <Typography variant="h6"> {element.articleTitle}</Typography>
                 </Link>
                 </Item>
@@ -56,19 +56,11 @@ export default function Articles() {
                 }
               </Grid>
           
-              <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
-                <Item>Test</Item>
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
-                <Item>Test</Item>
-              </Grid>
-              <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
-                <Item>Test</Item>
-              </Grid>
+              
+              
+              
             </Grid>
-            <Typography variant="h6">
-             Place Articles here
-           </Typography>
+          
           </Box>
            
         );

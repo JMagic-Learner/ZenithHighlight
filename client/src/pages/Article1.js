@@ -1,5 +1,9 @@
 import * as React from 'react';
+import { useState } from 'react';
 import { styled } from '@mui/material/styles';
+import { useParams } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+import { QUERY_SINGLE_ARTICLE} from '../utils/queries';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
@@ -18,21 +22,51 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export default function Article1() {
+const Article1 = () => {
+  // We first capture the parameter being fed from Articles.js 
+  const { articleId } = useParams();
+  const [renderComment, commentState] = useState('false');
+
+  const { loading, data } = useQuery(QUERY_SINGLE_ARTICLE, {
+    // pass URL parameter
+    // We are searching for a single ARTICLE, using the paramter passed through by Articles.js
+    variables: { articleId: articleId },
+  });
+
+  // We are going to check to see if QUERY_SINGLE_ARTICLE has returned a value
+  // If DATA, then drill into ARTICLE
+  const articleData = data?.article || {};
+  if (articleData) {
+    console.log("QUERY_SINGLE_ARTICLE has found a article matching the param id");
+  }
+  if (articleData._id) {
+    console.log("QUERY_SINGLE_ARTICLE has found " + articleData._id + " as the value of _id");
+  }
+  if (articleData.articleTitle) {
+    console.log("QUERY_SINGLE_ARTICLE has found " + articleData.articleTitle + " as the value of title");
+  }
+  if (articleData.articleAuthor) {
+    console.log("QUERY_SINGLE_ARTICLE has found " + articleData.articleAuthor + " as the value of author");
+  }
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+
     return(
      
           <Box sx={{ flexGrow: 1 }}>
-            <Typography variant="h4"> {title} </Typography>
+            <Typography variant="h4"> {articleData.articleTitle} </Typography>
 
-            <Divider sx={{ p: 5.0 }}>  AUTHOR - {author} </Divider>
+            <Divider sx={{ p: 5.0 }}>  AUTHOR - {articleData.articleauthor} </Divider>
 
             <Typography >
 
-              {paragraph1}
+              { articleData.articleText1}
 
               <Divider sx={{ p: 2.0 }}>  </Divider>
 
-              {paragraph2}
+              {paragraph2.articleText2}
               
             </Typography>
             
@@ -40,3 +74,5 @@ export default function Article1() {
            
         );
       }
+
+      export default Article1;
