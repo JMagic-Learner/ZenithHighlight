@@ -5,7 +5,7 @@ import { useMutation } from '@apollo/client';
 import { Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box'
+import Box from '@mui/material/Box';
 
 import { ADD_ARTICLE} from '../../utils/mutations';
 import { QUERY_ARTICLES, QUERY_ME } from '../../utils/queries';
@@ -105,14 +105,14 @@ const [articleTitle, setArticleTitle] = useState('');
             onSubmit={handleFormSubmit}
           >
               <div className="col-12 col-lg-9">
-              <TextField
+              <textarea
                 name="articleTitle"
-                placeholder="Write the Title"
+                placeholder="Title"
                 value={articleTitle}
-                // className="form-input w-100"
-                variant="outlined"
+                className="form-input w-100"
+                style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
-              ></TextField>
+              ></textarea>
             </div>
 
             <div className="col-12 col-lg-9">
