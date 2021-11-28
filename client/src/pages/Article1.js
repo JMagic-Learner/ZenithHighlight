@@ -58,15 +58,15 @@ const Article1 = () => {
           <Box sx={{ flexGrow: 1 }}>
             <Typography variant="h4"> {articleData.articleTitle} </Typography>
 
-            <Divider sx={{ p: 5.0 }}>  AUTHOR - {articleData.articleauthor} </Divider>
+            <Divider sx={{ p: 5.0 }}>  AUTHOR - {articleData.articleAuthor} </Divider>
 
             <Typography >
 
-              { articleData.articleText1}
+              {articleData.articleText1}
 
               <Divider sx={{ p: 2.0 }}>  </Divider>
 
-              {paragraph2.articleText2}
+              {articleData.articleText2}
               
             </Typography>
             
