@@ -5,6 +5,7 @@ import { useMutation } from '@apollo/client';
 import { Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box'
 
 import { ADD_ARTICLE} from '../../utils/mutations';
 import { QUERY_ARTICLES, QUERY_ME } from '../../utils/queries';
