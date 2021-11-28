@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
+import { Typography } from '@mui/material';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+
 import { ADD_ARTICLE} from '../../utils/mutations';
 import { QUERY_ARTICLES, QUERY_ME } from '../../utils/queries';
 
@@ -75,8 +79,15 @@ const [articleTitle, setArticleTitle] = useState('');
    };
 
   return (
-    <div>
-      <h3>Lets add an article to the database</h3>
+    <Box 
+    component="form"
+      sx={{
+        '& .MuiTextField-root': { m: 1, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+      >
+      <Typography variant='h3'>Lets add an article to the database</Typography>
 
       {Auth.loggedIn() ? (
         <>
@@ -93,14 +104,14 @@ const [articleTitle, setArticleTitle] = useState('');
             onSubmit={handleFormSubmit}
           >
               <div className="col-12 col-lg-9">
-              <textarea
+              <TextField
                 name="articleTitle"
                 placeholder="Write the Title"
                 value={articleTitle}
-                className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                // className="form-input w-100"
+                variant="outlined"
                 onChange={handleChange}
-              ></textarea>
+              ></TextField>
             </div>
 
             <div className="col-12 col-lg-9">
@@ -144,7 +155,7 @@ const [articleTitle, setArticleTitle] = useState('');
         </p>
       )}
        
-    </div>
+    </Box>
   ); 
   
 };
