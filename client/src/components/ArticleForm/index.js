@@ -80,14 +80,7 @@ const [articleTitle, setArticleTitle] = useState('');
    };
 
   return (
-    <Box 
-    component="form"
-      sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-      >
+    <div>
       <Typography variant='h3'>Lets add an article to the database</Typography>
 
       {Auth.loggedIn() ? (
@@ -156,7 +149,7 @@ const [articleTitle, setArticleTitle] = useState('');
         </p>
       )}
        
-    </Box>
+       </div>
   ); 
   
 };
