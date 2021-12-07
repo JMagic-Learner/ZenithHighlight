@@ -22,7 +22,7 @@ export default function Home() {
 
 
        
-      <Carousel1 />
+      {/* <Carousel1 /> */}
      
      
 <Card>
