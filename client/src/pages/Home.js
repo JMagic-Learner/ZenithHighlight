@@ -10,12 +10,21 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 
+import Carousel1 from '../components/Carousel';
+
+
 
 
 export default function Home() {
     return(
         
         <Box sx={{ flexGrow: 1 }}>
+
+
+       
+      <Carousel1 />
+     
+     
 <Card>
 <CardMedia
         component="img"
@@ -23,6 +32,9 @@ export default function Home() {
         image="./assets/images/Banner_Lower2.jpg"
         alt="green iguana"
       /> 
+      
+      
+
       <CardContent>
         <Typography variant="h6">
           Kingdom Death - Ringtail Vixen (Halloween)
