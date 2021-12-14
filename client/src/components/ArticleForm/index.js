@@ -80,7 +80,7 @@ const [articleTitle, setArticleTitle] = useState('');
    };
 
   return (
-    <div>
+    <Box>
       <Typography variant='h3'>Lets add an article to the database</Typography>
 
       {Auth.loggedIn() ? (
@@ -149,7 +149,7 @@ const [articleTitle, setArticleTitle] = useState('');
         </p>
       )}
        
-       </div>
+       </Box>
   ); 
   
 };
