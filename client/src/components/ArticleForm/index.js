@@ -32,6 +32,8 @@ const [articleTitle, setArticleTitle] = useState('');
         console.error(e);
       }
 
+      
+
       // update me object's cache
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
@@ -43,6 +45,7 @@ const [articleTitle, setArticleTitle] = useState('');
 
    const handleFormSubmit = async (event) => {
      event.preventDefault();
+     console.log("you have attempted to submit an article");
 
     try {
        const { data } = await addArticle({
