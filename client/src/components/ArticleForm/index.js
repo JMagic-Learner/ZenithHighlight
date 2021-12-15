@@ -100,40 +100,40 @@ const [articleTitle, setArticleTitle] = useState('');
             className="flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
           >
-              <div className="col-12 col-lg-9">
+              <div>
               <textarea
                 name="articleTitle"
                 placeholder="Title"
                 value={articleTitle}
                 className="form-input w-500"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                style={{ width: "75%" ,lineHeight: '5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
             </div>
 
-            <div className="col-6 col-lg-9">
+            <div>
               <textarea
                 name="articleText1"
                 placeholder="Write the first / introductory paragraph"
                 value={articleText1}
                 className="form-input w-500"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                style={{ width: "75%" ,lineHeight: '5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
             </div>
 
-            <div className="col-6 col-lg-9">
+            <div>
               <textarea
                 name="articleText2"
                 placeholder="Write the second/ concluding paragraph"
                 value={articleText2}
                 className="form-input w-500"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                style={{ width: "75%" ,lineHeight: '5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
             </div>
 
-            <div className="col-6 col-lg-3">
+            <div>
               <button className="btn btn-primary btn-block py-3" type="submit">
                Add Article
               </button>
