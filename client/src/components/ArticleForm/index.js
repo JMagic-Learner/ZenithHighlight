@@ -79,7 +79,7 @@ const [articleTitle, setArticleTitle] = useState('');
     }
    };
 
-  const actions 
+
 
   return (
     <Box>
@@ -105,7 +105,7 @@ const [articleTitle, setArticleTitle] = useState('');
                 name="articleTitle"
                 placeholder="Title"
                 value={articleTitle}
-                className="form-input w-100"
+                className="form-input w-500"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
@@ -116,7 +116,7 @@ const [articleTitle, setArticleTitle] = useState('');
                 name="articleText1"
                 placeholder="Write the first / introductory paragraph"
                 value={articleText1}
-                className="form-input w-100"
+                className="form-input w-500"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
@@ -127,7 +127,7 @@ const [articleTitle, setArticleTitle] = useState('');
                 name="articleText2"
                 placeholder="Write the second/ concluding paragraph"
                 value={articleText2}
-                className="form-input w-100"
+                className="form-input w-500"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
