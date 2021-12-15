@@ -79,15 +79,10 @@ const [articleTitle, setArticleTitle] = useState('');
     }
    };
 
+  const actions 
+
   return (
-    <Box
-      component="form"
-      sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
+    <Box>
       <Typography variant='h3'>Lets add an article to the database</Typography>
 
       {Auth.loggedIn() ? (
@@ -100,12 +95,7 @@ const [articleTitle, setArticleTitle] = useState('');
           >
             Character Count: {characterCount}/500
           </p>
-          <TextField
-          required
-          id="outlined-required"
-          label="Required"
-          defaultValue="Hello World"
-        />
+          
           <form
             className="flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
