@@ -71,12 +71,12 @@ const [articleTitle, setArticleTitle] = useState('');
         setArticleTitle(value);
           setCharacterCount(value.length);
         }
-    if (name === 'articleText1' && value.length <= 500) {
+    if (name === 'articleText1' && value.length <= 5000) {
      setArticleText1(value);
        setCharacterCount(value.length);
      }
 
-    if (name === 'articleText2' && value.length <= 500) {
+    if (name === 'articleText2' && value.length <= 5000) {
         setArticleText2(value);
         setCharacterCount(value.length);
     }
@@ -92,11 +92,11 @@ const [articleTitle, setArticleTitle] = useState('');
         <>
           <p
             className={`m-0 ${
-               characterCount === 500 
+               characterCount === 10000 
               //  || error ? 'text-danger' : ''
             }`}
           >
-            Character Count: {characterCount}/500
+            Character Count: {characterCount}/10000
           </p>
           
           <form
