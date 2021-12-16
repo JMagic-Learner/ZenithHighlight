@@ -109,7 +109,7 @@ const [articleTitle, setArticleTitle] = useState('');
                 placeholder="Title"
                 value={articleTitle}
                 className="form-input w-500"
-                style={{ width: "75%" ,lineHeight: '5', resize: 'vertical' }}
+                style={{ height: "75%", width: "75%" ,lineHeight: '1', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
             </div>
@@ -120,7 +120,7 @@ const [articleTitle, setArticleTitle] = useState('');
                 placeholder="Write the first / introductory paragraph"
                 value={articleText1}
                 className="form-input w-500"
-                style={{ width: "75%" ,lineHeight: '5', resize: 'vertical' }}
+                style={{ height: "75%", width: "75%" ,lineHeight: '1', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
             </div>
@@ -131,7 +131,7 @@ const [articleTitle, setArticleTitle] = useState('');
                 placeholder="Write the second/ concluding paragraph"
                 value={articleText2}
                 className="form-input w-500"
-                style={{ width: "75%" ,lineHeight: '5', resize: 'vertical' }}
+                style={{ height: "75%", width: "75%" ,lineHeight: '1', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
             </div>
