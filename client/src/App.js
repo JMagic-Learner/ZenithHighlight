@@ -91,7 +91,7 @@ function App() {
     <Card>
     <CardMedia
         component="img"
-        height="350"
+        height="100"
         image="./assets/images/ZENITH_HIGHLIGHT_BANNER2.jpg"
         alt="green iguana"
       /> 
