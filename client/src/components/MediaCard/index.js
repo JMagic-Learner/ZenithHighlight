@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
+import { Link } from 'react-router-dom';
 
 const theme = createTheme({
   palette: {
