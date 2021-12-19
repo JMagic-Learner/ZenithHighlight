@@ -49,7 +49,9 @@ export default function MediaCard() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" sx={{ mx: "auto" }}>Learn More</Button>
+      <Button size="small" sx={{ mx: "auto" }} >
+      <Link margin="auto" to="/Infinity"> Learn More</Link>
+       </Button>
       </CardActions>
     </Card>
     </ThemeProvider>

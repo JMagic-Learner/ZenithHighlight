@@ -119,6 +119,9 @@ function App() {
             <Route exact path="/Warhammer">
               <Warhammer  />
             </Route>
+            <Route exact path="/Infinity">
+              <Warhammer  />
+            </Route>
             <Route exact path="/Articles">
               <Articles  />
             </Route>
