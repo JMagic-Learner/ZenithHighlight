@@ -23,6 +23,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
 import ButtonAppBar from './components/Appbar';
+import Infinity from './pages/Infinity';
 import Publish from './pages/Publish.js';
 import Warhammer from './pages/Warhammer40k';
 import Articles from './pages/Articles';
@@ -120,7 +121,7 @@ function App() {
               <Warhammer  />
             </Route>
             <Route exact path="/Infinity">
-              <Warhammer  />
+              <Infinity  />
             </Route>
             <Route exact path="/Articles">
               <Articles  />
