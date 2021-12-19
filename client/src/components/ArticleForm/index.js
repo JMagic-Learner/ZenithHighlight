@@ -13,12 +13,14 @@ import { QUERY_ARTICLES, QUERY_ME } from '../../utils/queries';
 import Auth from '../../utils/auth';
 
 const ArticleForm = () => {
-const [articleTitle, setArticleTitle] = useState('');
+
+  // The follow three useStates record, and detect changes in text boxes" //
+  const [articleTitle, setArticleTitle] = useState('');
   const [articleText1, setArticleText1] = useState('');
   const [articleText2, setArticleText2] = useState('');
+  const [characterCount, setCharacterCount] = useState(0);
 
-   const [characterCount, setCharacterCount] = useState(0);
-
+  // We are going to ping REACT, mutation to add an Article.
   const [addArticle, { error }] = useMutation(ADD_ARTICLE, {
     update(cache, { data: { addArticle } }) {
       try {
@@ -31,9 +33,6 @@ const [articleTitle, setArticleTitle] = useState('');
       } catch (e) {
         console.error(e);
       }
-
-      
-
       // update me object's cache
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
@@ -43,7 +42,8 @@ const [articleTitle, setArticleTitle] = useState('');
     },
   });
 
-   const handleFormSubmit = async (event) => {
+// The following function waits for an submission event // 
+  const handleFormSubmit = async (event) => {
      event.preventDefault();
      console.log("you have attempted to submit an article");
 
@@ -64,6 +64,7 @@ const [articleTitle, setArticleTitle] = useState('');
       }
    };
 
+// Handle Change is an function that renders/ and limits the available text // 
   const handleChange = (event) => {
      const { name, value } = event.target;
 
@@ -87,9 +88,10 @@ const [articleTitle, setArticleTitle] = useState('');
   return (
     <Box>
       <Typography variant='h3'>Lets add an article to the database</Typography>
-
+      {/* Check to see if user is logged in */}
       {Auth.loggedIn() ? (
         <>
+        
           <p
             className={`m-0 ${
                characterCount === 10000 
@@ -149,6 +151,8 @@ const [articleTitle, setArticleTitle] = useState('');
           </form>
         </>
       ) : (
+
+      // If the user is not logged in, this else will render the following message // 
         <p>
           You need to be logged in to share your experience. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>

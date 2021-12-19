@@ -48,6 +48,14 @@ export default function About() {
         </Typography>
 
         <Typography variant="h4">
+          <h1> Associated LGS </h1>
+          <li> <a href="https://terracruxgames.com/">TERRACRUX </a> </li>
+          <li> <a href="https://www.thegamematrix.com/">The Game Matrix</a></li>
+                
+           
+        </Typography>
+
+        <Typography variant="h4">
           <h1> WARGAMING </h1>
               <li>
                 Warhammer 40k
