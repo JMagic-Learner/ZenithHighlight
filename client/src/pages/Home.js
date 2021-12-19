@@ -29,7 +29,7 @@ export default function Home() {
 <CardMedia
         component="img"
         height="550"
-        image="./assets/images/Banner_Lower2.jpg"
+        image="./assets/images/ZenithHighlightTemplate.jpg"
         alt="green iguana"
       /> 
       
@@ -37,7 +37,7 @@ export default function Home() {
 
       <CardContent>
         <Typography variant="h6">
-          Kingdom Death - Ringtail Vixen (Halloween)
+          Recent Works
         </Typography>
       </CardContent>
        </Card>
