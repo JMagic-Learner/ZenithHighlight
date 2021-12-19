@@ -9,6 +9,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import { Typography } from '@mui/material';
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 import CardMedia from '@mui/material/CardMedia';
@@ -88,14 +89,18 @@ function App() {
     <ThemeProvider theme={theme}>
     <Router>
     <div className="App">
-    <Card>
+    <Typography variant="h2">
+      ZENITH HIGHLIGHT
+      </Typography>
+    {/* <Card>
     <CardMedia
         component="img"
-        height="100"
+        width="150%"
+        height="250"
         image="./assets/images/ZENITH_HIGHLIGHT_BANNER2.jpg"
         alt="green iguana"
       /> 
-    </Card>
+    </Card> */}
     
         <Header/>
         
