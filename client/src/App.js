@@ -11,6 +11,8 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
+import CardMedia from '@mui/material/CardMedia';
+import Card from '@mui/material/Card';
 
 
 
@@ -86,6 +88,15 @@ function App() {
     <ThemeProvider theme={theme}>
     <Router>
     <div className="App">
+    <Card>
+    <CardMedia
+        component="img"
+        height="350"
+        image="./assets/images/ZENITH_HIGHLIGHT_BANNER2.jpg"
+        alt="green iguana"
+      /> 
+    </Card>
+    
         <Header/>
         
         {/* <ButtonAppBar/> */}
