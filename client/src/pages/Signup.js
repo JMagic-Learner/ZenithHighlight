@@ -13,7 +13,7 @@ const Signup = () => {
     password: '',
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
-
+  
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -25,15 +25,22 @@ const Signup = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    console.log("HandleFormSubmit has been triggered");
     console.log(formState);
 
     try {
       const { data } = await addUser({
         variables: { ...formState },
       });
-
+      console.log("We have attempted to wait for addUser");
+      console.log('This is the formstate ' + formState);
+      console.log(formState.name);
+      console.log(formState.password);
+      console.log(formState.email);
+      
       Auth.login(data.addUser.token);
     } catch (e) {
+      console.log("An error has been logged");
       console.error(e);
     }
   };
@@ -87,6 +94,7 @@ const Signup = () => {
 
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
+                <p>An error has been detected</p> 
                 {error.message}
               </div>
             )}
