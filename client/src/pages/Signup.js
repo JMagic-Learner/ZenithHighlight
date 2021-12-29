@@ -28,9 +28,17 @@ const Signup = () => {
     console.log("HandleFormSubmit has been triggered");
     console.log(formState);
 
+    // try {
+    //   const { data } = await addUser({
+    //     variables: { ...formState },
+    //   });
     try {
       const { data } = await addUser({
-        variables: { ...formState },
+        variables: { 
+          username: formState.name,
+          email: formState.email,
+          password: formState.password
+         },
       });
       console.log("We have attempted to wait for addUser");
       console.log('This is the formstate ' + formState);

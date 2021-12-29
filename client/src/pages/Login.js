@@ -20,13 +20,28 @@ const Login = (props) => {
   };
 
   // submit form
+  // const handleFormSubmit = async (event) => {
+  //   event.preventDefault();
+  //   console.log('You have submited a login attempt');
+  //   console.log(formState);
+  //   try {
+  //     const { data } = await login({
+  //       variables: { ...formState },
+        
+  //     });
+
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log('You have submited a login attempt');
     console.log(formState);
     try {
       const { data } = await login({
-        variables: { ...formState },
+        variables: { 
+         email: formState.email,
+         password: formState.password
+         },
+        
       });
 
       // Auth.login(data.login.token);
