@@ -141,7 +141,7 @@ const Header = () => {
          
 
          
-          <Box>
+          
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/">Home</Button>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/About">About</Button>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Gallery">Gallery</Button>
@@ -154,7 +154,7 @@ const Header = () => {
           ) : ( 
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Login">Login</Button>
           )}
-          </Box>
+          
         
        
           {/* /* <Button onClick={handleChange} color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} to={"/Gallery"}>Gallery</Button>
