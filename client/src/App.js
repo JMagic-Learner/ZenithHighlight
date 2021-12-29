@@ -10,19 +10,13 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { Typography } from '@mui/material';
-import Link from '@mui/material/Link';
-import Button from '@mui/material/Button';
-import CardMedia from '@mui/material/CardMedia';
-import Card from '@mui/material/Card';
-
-
 
 import './App.css';
 import Header from './components/Header'
 import Home from './pages/Home';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
-import ButtonAppBar from './components/Appbar';
+
 import Infinity from './pages/Infinity';
 import Publish from './pages/Publish.js';
 import Warhammer from './pages/Warhammer40k';
@@ -31,11 +25,6 @@ import Article1 from './pages/Article1';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
