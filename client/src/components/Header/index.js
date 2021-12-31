@@ -16,10 +16,7 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import Grid from '@mui/material/Grid'; 
 
 
 
@@ -141,21 +138,34 @@ const Header = () => {
          
 
          
-          
+    <Grid container spacing={2}>
+    <Grid item xs={6} md={2}>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/">Home</Button>
+    </Grid>
+    <Grid item xs={6} md={2}>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/About">About</Button>
+    </Grid>
+    <Grid item xs={6} md={2}>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Gallery">Gallery</Button>
+    </Grid>
+    <Grid item xs={6} md={2}>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Articles">Articles</Button>
+    </Grid>
+    <Grid item xs={6} md={2}>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Publish">Publish</Button>
-          <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Signup">Signup</Button>
+    </Grid>
           
           {Auth.loggedIn() ? (
+            <Grid item xs={6} md={2}>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} onClick={logout}>Logout</Button>
+          </Grid>
           ) : ( 
+            <Grid item xs={6} md={2}>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Login">Login</Button>
+          </Grid>
           )}
           
-        
+          </Grid>     
        
           {/* /* <Button onClick={handleChange} color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} to={"/Gallery"}>Gallery</Button>
           <Button onClick={refreshPage} color="inherit" variant="h6" component="div" sx={{ flexGrow: 1 }}>Tutorials</Button>
