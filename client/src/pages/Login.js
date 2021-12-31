@@ -44,7 +44,7 @@ const Login = (props) => {
         
   //     });
 
-      // Auth.login(data.login.token);
+     Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
     }
