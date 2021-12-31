@@ -154,6 +154,10 @@ const Header = () => {
     <Grid item xs={6} md={2}>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Publish">Publish</Button>
     </Grid>
+    <Grid item xs={6} md={2}>
+    <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Signup">Signup</Button>
+    </Grid>
+   
           
           {Auth.loggedIn() ? (
             <Grid item xs={6} md={2}>
