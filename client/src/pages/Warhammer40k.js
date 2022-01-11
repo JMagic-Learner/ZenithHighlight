@@ -15,7 +15,7 @@ import { QUERY_CAT_OBJECTIVES } from '../utils/queries';
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
-  textAlign: 'center',
+  textAlign: 'left',
   color: theme.palette.text.secondary,
 }));
 
@@ -40,7 +40,7 @@ export default function Warhammer() {
 
     <Box sx={{ flexGrow: 1 }}>
       <Typography sx={{ p: 2.0 }} variant="h2"> 40k Objectives</Typography>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} style={{ display: "flex", justifyContent: "flex-start" }}>
 
      
         <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
