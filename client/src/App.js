@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -16,9 +15,9 @@ import Header from './components/Header'
 import Home from './pages/Home';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
-
+import Calendar from './pages/Calendar';
 import Infinity from './pages/Infinity';
-import Publish from './pages/Publish.js';
+import Publish from './pages/Publish';
 import Warhammer from './pages/Warhammer40k';
 import Articles from './pages/Articles';
 import Article1 from './pages/Article1';
@@ -126,6 +125,9 @@ function App() {
             </Route>
             <Route exact path="/Publish">
               <Publish />
+            </Route>
+            <Route exact path="/Calendar">
+              <Calendar />
             </Route>
           </Switch>
         </div>

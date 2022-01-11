@@ -1,9 +1,18 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Article } = require('../models');
+const { User, Article, Objectives } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
+    objectives: async () => {
+      return Objectives.find();
+    },
+    objectivesByName: async (parent, {name}) => {
+      return Objectives.findOne({name});
+    },
+    objectivesByCat: async (parent, {category}) => {
+      return Objectives.find({category});
+    },
     users: async () => {
       return User.find().populate('article');
     },

@@ -1,6 +1,16 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
+  type Objectives {
+    _id: ID
+    category: String
+    name: String
+    priority: Int!
+    priorityDescription: String
+    description: String
+    victoryPoints: [Int]!
+  }
+
   type User {
     _id: ID
     username: String
@@ -24,6 +34,9 @@ const typeDefs = gql`
   } 
 
   type Query {
+    objectives: [Objectives]
+    objectivesByName(name: String!): Objectives
+    objectivesByCat(category: String!): [Objectives]
     users: [User]
     user(username: String!): User
     articles(username: String): [Article]

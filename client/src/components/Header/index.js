@@ -79,6 +79,9 @@ const Header = () => {
           <ListItem>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Publish">Publish</Button>
           </ListItem>
+          <ListItem>
+          <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Calendar">Calendar</Button>
+          </ListItem>
          
       </List>
       <Divider />

@@ -1,10 +1,7 @@
 import * as React from 'react';
-
 import Box from '@mui/material/Box';
-
-
 import { Typography } from '@mui/material';
-
+import Grid from '@mui/material/Grid'; 
 //Image Components
 
 
@@ -92,15 +89,19 @@ const styles = {
 
 export default function Gallery() {
     return(
-      
-        <Box sx={{ flexGrow: 1 }}>
-
-        <Typography variant="h3">
+      <Box sx={{ flexGrow: 1 }}>
+         <Typography variant="h3">
           <h1> Gallery </h1>
         </Typography>
+<Grid container spacing={2}> 
+<Grid item xs={8} md={4}>
+       
+
+       
 
         <ImageList
-  sx={{ width: 2000, height: 1800 }}
+  
+  sx={{ width: '325%', height: 2900 }}
   variant="quilted"
   cols={4}
   rowHeight={484}
@@ -117,9 +118,10 @@ export default function Gallery() {
 </ImageList>
 
        
-      </Box>
-      
-        
+    
+      </Grid>  
+      </Grid>   
+        </Box>  
     );
 }
 

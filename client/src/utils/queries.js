@@ -1,5 +1,46 @@
 import { gql } from '@apollo/client';
 
+
+export const QUERY_OBJECTIVES = gql`
+  query getObjectives {
+    objectives {
+      _id
+      category
+      name
+      priority
+      priorityDescription
+      description
+      victoryPoints
+    }
+  }`
+
+  export const QUERY_NAME_OBJECTIVES = gql`
+  query objectivesByName($name: String!) {
+    objectivesByName(name: $name){
+      _id
+      category
+      name
+      priority
+      priorityDescription
+      description
+      victoryPoints
+    }
+  }`
+
+  export const QUERY_CAT_OBJECTIVES = gql`
+  query objectivesByCat($category: String!) {
+    objectivesByCat(category: $category) {
+      _id
+      category
+      name
+      priority
+      priorityDescription
+      description
+      victoryPoints
+    }
+  }`
+
+
 export const QUERY_USER = gql`
   query user($username: String!) {
     user(username: $username) {

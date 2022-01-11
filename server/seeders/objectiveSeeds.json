@@ -1,0 +1,146 @@
+[
+  {
+    "category": "Battlefield Supremacy",
+    "name": "ENGAGE ON ALL FRONTS",
+    "priority": 3,
+    "priorityDescription": "End of your turn",
+    "description": "Score 2 victory points at the end of turn if you have one or more units from your army wholly within three different table quarters, and those units are all more than 6 inches from the center of the battlefield. Score 3 victory points instead if you have one or more units from your army wholly within each table quarter, and those units are all more than 6 inches from the center of the battlefield.",
+    "victoryPoints": [2, 3]
+  },
+  {
+    "category": "Battlefield Supremacy",
+    "name": "LINEBREAKER",
+    "priority": 3,
+    "priorityDescription": "End of your turn",
+    "description": "Score 4 victory points at the end of your turn if two or more units from your army (excluding AIRCRAFT) are wholly within your opponent's deployment zone",
+    "victoryPoints": [4]
+  },
+  {
+    "category": "Battlefield Supremacy",
+    "name": "DOMINATION",
+    "priority": 3,
+    "priorityDescription": "End of your turn",
+    "description": "Score 3 victory points if you control more than half the total number of objective markers on the battlefield at the end of your turn",
+    "victoryPoints": [3]
+  },
+  {
+    "category": "No Mercy, No Respite",
+    "name": "THIN THEIR RANKS",
+    "priority": 5,
+    "priorityDescription": "End of Battle",
+    "description": "If you select this objective, keep a tally of kill points; each time an enemy model is destroyed, add 1 to this tally (add 10 to this tally instead if the model that was destroyed has a Wounds characteristic of 10 or more). A model can, if it is resurrected for any reason (i.e it was destroyed and subsequently returned to the battlefield), potentially add several points to this tally (assuming it is resurrected and subsequently destroyed several times over. At the end of battle, devide your kill points tally by 10 and round down - the result is the number of victory points you score.",
+    "victoryPoints": [0]
+  },
+  {
+    "category": "No Mercy, No Respite",
+    "name": "GRIND THEM DOWN",
+    "priority": 4,
+    "priorityDescription": "End of Battle Round",
+    "description": "Score 3 victory points at the end of the battle round if more enemy units than friendly units were destroyed this battle round",
+    "victoryPoints": [3]
+  },
+  {
+    "category": "No Mercy, No Respite",
+    "name": "WHILE WE STAND, WE FIGHT",
+    "priority": 5,
+    "priorityDescription": "End of Battle ",
+    "description": "If you select this objective, then before the battle you must identify which three models from your army (excluding models with the Fortification Battlefield Role) have the highest points value, and make a note of them on y our army roster (if two or more models are tied, you can choose between them). If you army has three or fewer models, then you instead identify all the units in your army. A model's points cost includes the points of all weapons and wargear it is equiped with. You score 5 victory points for each of these battlefield at the end of battle.",
+    "victoryPoints": [5, 10, 15]
+  },
+  {
+    "category": "Purge The Enemy",
+    "name": "TITAN HUNTER",
+    "priority": 5,
+    "priorityDescription": "End of Battle ",
+    "description": "Score 10 victory points at the end of the battlefield if one enemy TITANIC model is destroyed, 12 victory points if two enemy TITANIC models are destroyed, or 15 victory points if three or more enemy TITANIC models are destroyed",
+    "victoryPoints": [10, 12, 15]
+  },
+  {
+    "category": "Purge The Enemy",
+    "name": "BRING IT DOWN",
+    "priority": 5,
+    "priorityDescription": "End of Battle ",
+    "description": "Score 2 victory points at the end of the battle for each enemy MONSTER or VEHICLE model with a Wounds characteristic of 10 or less that is destroyed, and 3 victory points for each enemy MONSTER or VEHICLE model with a Wounds characteristic of 11 or more that is destroyed.",
+    "victoryPoints": [2, 3]
+  },
+  {
+    "category": "Purge The Enemy",
+    "name": "CUT OFF THE HEAD",
+    "priority": 5,
+    "priorityDescription": "End of Battle ",
+    "description": "At the end of battle, you score a number of victory points if the enemy WARLORD was destroyed during the battle. The number of victory points scored depends on the battle round during which the neemy WARLORD was destroyed. If an enemy WARLORD was destroyed, but was then sresurrected or otherwise returned to the battlefield and subsequently destroyed again, the for the purposes of this secondary objective it was destroyed during the battle round in which it was last removed from the battlefield",
+    "victoryPoints": [13,10,6,3,1]
+  },
+  {
+    "category": "Purge The Enemy",
+    "name": "ASSASSINATE",
+    "priority": 5,
+    "priorityDescription": "End of Battle ",
+    "description": "Score 3 victory points at the end of the battle for each enemy CHARACTER model that is destroyed",
+    "victoryPoints": [3]
+  },
+  {
+    "category": "Shadow Operations",
+    "name": "RAISE THE BANNERS HIGH",
+    "priority": 2,
+    "priorityDescription": "End of Command Phase ",
+    "description": "Raise Banners (Action): One or more INFANTRY units from your army can start to perform this action at the end of your Movement phase. Each unit from your army that starts to perfrom this action must be in range of different objective marker that does not have one of your banners raised upon it (see below). A unit cannot start this action while there is any enemy units (excluding AIRCRAFT) in range of the same objective marker. The action is completed at the end of your turn. If this action is succesfully completed, that objective marker is said to have one of your army's banners raised on it (the banner is 'removed' if your opponent controls the objective marker at the start of any phase). You score 1 victory point at the end of each of your Command phases, and 1 victory point at end of the battle, for each objective marker on the battlefield that has one of your banners raised upon it.",
+    "victoryPoints": [1]
+  },
+  {
+    "category": "Shadow Operations",
+    "name": "INVESTIGATE SITES",
+    "priority": 3,
+    "priorityDescription": "End of Turn ",
+    "description": "Score 3 victory points each time a unit from your army succesfully completes the following action: INVESTIGATE SITES (ACTION): One unit from your army can start to perform this action at the end of your movement phase if it is within 6 inches of the center of the battlefield and no enemy units (excluding AIRCRAFT) are within 6 inches of the center of the battlefield. This action is completed at the end of your turn.",
+    "victoryPoints": [3]
+  },
+  {
+    "category": "Shadow Operations",
+    "name": "DEPLOY SCRAMBLERS",
+    "priority": 5,
+    "priorityDescription": "End of Battle ",
+    "description": "Score 10 victory points at the end of the battle if you succesfully completed the following action three times during the battle - once in your deployment zone, once in your opponent's deployment zone, and once more than 6 inches from either player's deployment zone; DEPLOY SCRAMBLERS (Action) One Infantry unit (excluding CHARACTERS) from your army can start to perfrom this action at the end of your Movement Phase if it is wholly within your deployment zone, wholly within your opponents deployment zone or more than 6 inches from either player's deployment zone. This action is completed at the end of your turn.",
+    "victoryPoints": [10]
+  },
+  {
+    "category": "Shadow Operations",
+    "name": "TELEPORT HOMER",
+    "priority": 2,
+    "priorityDescription": "End of Command Phase ",
+    "description": "Score 4 victory points each time a unit from your army succcesfully completes the following action: TELEPORT HOMER (ACTION): One INFANTRY unit from your army can start to perform this action at the end of your Movement phase if it is wholly within your opponent's deployment zone. This action is completed at the end of y our next Command phase, provided the unit attempting it is still wholly within your opponent's deployment zone.",
+    "victoryPoints": [4]
+  },
+  {
+    "category": "Warpcraft",
+    "name": "ABHOR THE WITCH",
+    "priority": 5,
+    "priorityDescription": "End of Battle ",
+    "description": "You cannot select this secondary objective if your army includes any PSYKER units. Score 5 victory points at the end of the battle for each enemy PSYKER CHARACTER unit that is destroyed, and 3 victory points for every other enemy PSYKER unit that is destroyed.",
+    "victoryPoints": [3, 5]
+  },
+  {
+    "category": "Warpcraft",
+    "name": "MENTAL INTERROGATION",
+    "priority": 7,
+    "priorityDescription": "End of Phase ",
+    "description": "Score 3 victory points each time you succesfully complete the following psychic action: MENTAL INTERROGATION (PSYCHIC ACTION - WARP CHARGE 4) One PSYKER CHARACTER unit from your army can attempt to perform this psychic action in your Psychic phase if it is within 18 inches of any enemy CHARACTER models.",
+    "victoryPoints": [3]
+  },
+  {
+    "category": "Warpcraft",
+    "name": "PSYCHIC RITUAL",
+    "priority": 5,
+    "priorityDescription": "End of Battle ",
+    "description": "Score 15 victory points at the end of the battle if any unit from your army succesfully completed the following psychic action 3 times during the battle: PSYCHIC RITUAL (PSYCHIC ACTION - WARP CHARGE 3) One PSYKER CHARACTER unit from your army can attempt to perform this psychic action in your Psychic phase if it is within 6 inches of the center of the battlefield",
+    "victoryPoints": [15]
+  },
+  {
+    "category": "Warpcraft",
+    "name": "PIERCE THE VEIL",
+    "priority": 5,
+    "priorityDescription": "End of Battle ",
+    "description": "Score 8 victory points at the end of the battle if one or more units from your army succesfully completed the following psychic action 2 or more times during the battle, or 15 victory points at the end of the battle if one or more units from your army succesfully completed the following psychic action 4 times during the battle (note that you can only score this objective once) : PIERCE THE VEIL (PSYCHIC ACTION - WARP CHARGE 4) One PSYKER CHARACTER unit from your army can attempt to perform this psychic action in your Psychic phase if it is within 6 inches of your opponent battlefield edge and more than 6 inches from any enemy models",
+    "victoryPoints": [8,15]
+  }
+]
