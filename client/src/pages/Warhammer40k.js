@@ -30,10 +30,10 @@ export default function Warhammer() {
     console.log('We have succesfully queried objectives');
   }
 
-  const [age, setAge] = React.useState('');
+  const [objective, setObjective] = React.useState('');
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setObjective(event.target.value);
   };
   // Load all Warhammer 40k 2020 Objectives into this array.
   const ObjectivesArray = data?.objectives || [];
@@ -62,8 +62,8 @@ export default function Warhammer() {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value={age}
-                label="Age"
+                value={objective}
+                label="Objective 1"
                 onChange={handleChange}
               >
                 {ObjectivesArray.map((element) => {
@@ -71,7 +71,7 @@ export default function Warhammer() {
                     console.log("element has been detected")
                   } 
                   return(
-                <MenuItem value={10}>{element.name}</MenuItem>
+                <MenuItem>{element.name}</MenuItem>
                   );
                 })}
               
@@ -88,8 +88,8 @@ export default function Warhammer() {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value={age}
-                label="Age"
+                value={objective}
+                label="Objective 2"
                 onChange={handleChange}
               >
                 <MenuItem value={10}>Ten</MenuItem>
@@ -108,8 +108,8 @@ export default function Warhammer() {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value={age}
-                label="Age"
+                value={objective}
+                label="Objective 3"
                 onChange={handleChange}
               >
                 <MenuItem value={10}>Ten</MenuItem>
