@@ -20,69 +20,105 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function Warhammer() {
-  const { loading, objectiveFound } = useQuery(QUERY_OBJECTIVES);
-  if (objectiveFound) {
+  const { loading, data } = useQuery(QUERY_OBJECTIVES);
+  if (data) {
     console.log('We have succesfully queried objectives');
   }
   // Load all Warhammer 40k 2020 Objectives into this array.
-  const ObjectivesArray = objectiveFound?.objectives || [];
-  const { loading1, objectiveNameFound } = useQuery(QUERY_NAME_OBJECTIVES);
-  if (objectiveNameFound) {
-    console.log('We have succesfully queried objective by name');
-  }
-  const { loading2, objectiveCATFound } = useQuery(QUERY_CAT_OBJECTIVES);
-  if (objectiveCATFound) {
-    console.log('We have succesfully queried objective by category');
-  }
-    return(
-        <Box sx={{ flexGrow: 1 }}>
-          
-          <Typography sx={{ p: 2.0 }} variant="h2"> Warhammer 40k - 9th Edition</Typography>
-          
-        <Card>
-        <CardMedia
-                component="img"
-                height="550"
-                image="./assets/images/DeathCompany3.jpg"
-                alt="Death Company"
-              /> 
-              <CardContent>
-                <Typography variant="h6">
-                 Death Company - Warhammer 40k
-                </Typography>
-              </CardContent>
-               </Card>
+  const ObjectivesArray = data?.objectives || [];
+  console.log(ObjectivesArray);
+  // const { loading1, objectiveNameFound } = useQuery(QUERY_NAME_OBJECTIVES);
+  // if (objectiveNameFound) {
+  //   console.log('We have succesfully queried objective by name');
+  // }
+  // const { loading2, objectiveCATFound } = useQuery(QUERY_CAT_OBJECTIVES);
+  // if (objectiveCATFound) {
+  //   console.log('We have succesfully queried objective by category');
+  // }
 
-            <Typography variant="h6">
-              Released in August 2020, the 9th iteration of Warhammer 40k was designed to uproot problems 
-            </Typography>
-            <Grid container spacing={2}>
-            <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
-              {ObjectivesArray.map((element) => {
-              if(element) {
-              console.log("element has been detected")
-              }
-              if(element.name) {
-                console.log("A objective has been detected");
-                console.log("The name of this objective is: " + element.name);
-              }
-              return(
-                <Item>
-                <Typography> {element.category} </Typography>
+  return(
+
+    <Box sx={{ flexGrow: 1 }}>
+      <Typography sx={{ p: 2.0 }} variant="h2"> 40k Objectives</Typography>
+      <Grid container spacing={2}>
+
+     
+        <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
+        {ObjectivesArray.map((element) => {
+        if(element) {
+        console.log("element has been detected")
+        }
+        
+        return(
+          <Item>
+          <Typography> {element.category} </Typography>
                 <Typography> {element.name} </Typography>
                 <Typography> {element.priority} </Typography>
-                <Typography> {element.priorityDescription} </Typography>
+              <Typography> {element.priorityDescription} </Typography>
                 <Typography> {element.description} </Typography>
-                {ObjectivesArray.victoryPoints.map((VP) => {
-                  <Typography> {VP} </Typography>
-                })}
-                </Item>
-              );
-                  })
-                }
-              </Grid>
-              </Grid>
+          </Item>
+        );
+            })
+          }
+        </Grid>
+    
         
-        </Box>
-    )
+        
+        
+      </Grid>
+    
+    </Box>
+     
+  );
+    // return(
+    //     <Box sx={{ flexGrow: 1 }}>
+          
+    //       <Typography sx={{ p: 2.0 }} variant="h2"> Warhammer 40k - 9th Edition</Typography>
+          
+    //     <Card>
+    //     <CardMedia
+    //             component="img"
+    //             height="550"
+    //             image="./assets/images/DeathCompany3.jpg"
+    //             alt="Death Company"
+    //           /> 
+    //           <CardContent>
+    //             <Typography variant="h6">
+    //              Death Company - Warhammer 40k
+    //             </Typography>
+    //           </CardContent>
+    //            </Card>
+
+    //         <Typography variant="h6">
+    //           Released in August 2020, the 9th iteration of Warhammer 40k was designed to uproot problems 
+    //         </Typography>
+    //         <Grid container spacing={2}>
+    //         <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
+    //           {ObjectivesArray.map((element) => {
+    //           if(element) {
+    //           console.log("element has been detected")
+    //           }
+    //           if(element.name) {
+    //             console.log("A objective has been detected");
+    //             console.log("The name of this objective is: " + element.name);
+    //           }
+    //           return(
+    //             <Item>
+    //             <Typography> {element.category} </Typography>
+    //             <Typography> {element.name} </Typography>
+    //             <Typography> {element.priority} </Typography>
+    //             <Typography> {element.priorityDescription} </Typography>
+    //             <Typography> {element.description} </Typography>
+    //             {ObjectivesArray.victoryPoints.map((VP) => {
+    //               <Typography> {VP} </Typography>
+    //             })}
+    //             </Item>
+    //           );
+    //               })
+    //             }
+    //           </Grid>
+    //           </Grid>
+        
+    //     </Box>
+    // )
 }
