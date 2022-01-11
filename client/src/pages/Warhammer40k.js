@@ -50,13 +50,16 @@ export default function Warhammer() {
         }
         
         return(
+          
+      <CardContent>
           <Item>
           <Typography> {element.category} </Typography>
                 <Typography> {element.name} </Typography>
                 <Typography> {element.priority} </Typography>
-              <Typography> {element.priorityDescription} </Typography>
+                <Typography> {element.priorityDescription} </Typography>
                 <Typography> {element.description} </Typography>
           </Item>
+          </CardContent>
         );
             })
           }
