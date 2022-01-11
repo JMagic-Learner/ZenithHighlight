@@ -56,7 +56,7 @@ export default function Warhammer() {
             <Typography variant="h6">
               Released in August 2020, the 9th iteration of Warhammer 40k was designed to uproot problems 
             </Typography>
-
+            <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
               {ObjectivesArray.map((element) => {
               if(element) {
@@ -80,6 +80,7 @@ export default function Warhammer() {
               );
                   })
                 }
+              </Grid>
               </Grid>
         
         </Box>
