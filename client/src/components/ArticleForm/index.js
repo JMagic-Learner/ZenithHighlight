@@ -12,6 +12,8 @@ import { QUERY_ARTICLES, QUERY_ME } from '../../utils/queries';
 
 import Auth from '../../utils/auth';
 
+let CHECK = false;
+
 const ArticleForm = () => {
 
   // The follow three useStates record, and detect changes in text boxes" //
@@ -39,6 +41,10 @@ const ArticleForm = () => {
         query: QUERY_ME,
         data: { me: { ...me, articles: [...me.articles, addArticle] } },
       });
+
+      if (me ) {
+         CHECK = true;
+      }
     },
   });
 
@@ -143,10 +149,14 @@ const ArticleForm = () => {
                Add Article
               </button>
             </div>
-            {error && (
+            {/* {error && (
               <div className="col-12 my-3 bg-danger text-white p-3">
-                {error.message}
-              </div>
+                {error.message} 
+                 </div>*/}
+                {CHECK && (
+                <div className="col-12 my-3 bg-danger text-white p-3">
+                <p> We have submitted an article</p>
+                 </div>  
             )}
           </form>
         </>

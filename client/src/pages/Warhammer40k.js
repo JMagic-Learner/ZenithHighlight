@@ -9,7 +9,9 @@ import Grid from '@mui/material/Grid';
 import { useParams } from 'react-router-dom';
 import Paper from '@mui/material/Paper';
 import { useQuery } from '@apollo/client';
-import { QUERY_OBJECTIVES,QUERY_CAT_OBJECTIVES,QUERY_NAME_OBJECTIVES } from '../utils/queries';
+import { QUERY_OBJECTIVES } from '../utils/queries';
+import { QUERY_NAME_OBJECTIVES } from '../utils/queries';
+import { QUERY_CAT_OBJECTIVES } from '../utils/queries';
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
@@ -70,7 +72,6 @@ export default function Warhammer() {
                 <Typography> {element.name} </Typography>
                 <Typography> {element.priority} </Typography>
                 <Typography> {element.priorityDescription} </Typography>
-                <Typography> {element.description} </Typography>
                 <Typography> {element.description} </Typography>
                 {ObjectivesArray.victoryPoints.map((VP) => {
                   <Typography> {VP} </Typography>
