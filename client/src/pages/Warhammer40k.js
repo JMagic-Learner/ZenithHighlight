@@ -122,7 +122,7 @@ export default function Warhammer() {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value3={objective3}
+                value={objective3}
                 label="Objective 3"
                 onChange={handleChange}
               >
