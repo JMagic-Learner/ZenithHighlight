@@ -81,6 +81,7 @@ export default function Warhammer() {
           </Item>
         </CardContent>
     </Grid>
+    <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
         <CardContent>
           <Item>
             <Typography> Objective 2 </Typography>
@@ -93,14 +94,21 @@ export default function Warhammer() {
                 label="Objective 2"
                 onChange={handleChange}
               >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
+               {ObjectivesArray.map((element) => {
+                   if(element) {
+                    console.log("element has been detected")
+                  } 
+                  return(
+                <MenuItem value={element.name}>{element.name}</MenuItem>
+                  );
+                })}
+              
               </Select>
             </FormControl>
           </Item>
         </CardContent>
-
+    </Grid>
+    <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
         <CardContent>
           <Item>
             <Typography> Objective 3 </Typography>
@@ -113,13 +121,20 @@ export default function Warhammer() {
                 label="Objective 3"
                 onChange={handleChange}
               >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
+               {ObjectivesArray.map((element) => {
+                   if(element) {
+                    console.log("element has been detected")
+                  } 
+                  return(
+                <MenuItem value={element.name}>{element.name}</MenuItem>
+                  );
+                })}
+              
               </Select>
             </FormControl>
           </Item>
         </CardContent>
+    </Grid>
 
      
         <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
