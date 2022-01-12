@@ -70,7 +70,7 @@ export default function Warhammer() {
                 id="demo-simple-select"
                 value={objective1}
                 label="Objective 1"
-                onChange={handleChange1}
+                onChange={handleChange}
               >
                 {ObjectivesArray.map((element) => {
                    if(element) {
@@ -97,7 +97,7 @@ export default function Warhammer() {
                 id="demo-simple-select"
                 value={objective2}
                 label="Objective 2"
-                onChange={handleChange2}
+                onChange={handleChange}
               >
                {ObjectivesArray.map((element) => {
                    if(element) {
