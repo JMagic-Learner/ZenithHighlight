@@ -35,13 +35,13 @@ export default function Warhammer() {
   const [objective3, setObjective2] = React.useState('');
 
   const handleChange1 = (event) => {
-    setObjective1(event.target.value);
+    setObjective1(event.target.value1);
   };
   const handleChange2 = (event) => {
-    setObjective2(event.target.value);
+    setObjective2(event.target.value2);
   };
   const handleChange3 = (event) => {
-    setObjective3(event.target.value);
+    setObjective3(event.target.value3);
   };
   // Load all Warhammer 40k 2020 Objectives into this array.
   const ObjectivesArray = data?.objectives || [];
@@ -71,7 +71,7 @@ export default function Warhammer() {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value={objective1}
+                value1={objective1}
                 label="Objective 1"
                 onChange={handleChange1}
               >
@@ -80,7 +80,7 @@ export default function Warhammer() {
                     console.log("element has been detected")
                   } 
                   return(
-                <MenuItem value={element.name}>{element.name}</MenuItem>
+                <MenuItem value1={element.name}>{element.name}</MenuItem>
                   );
                 })}
               
@@ -98,7 +98,7 @@ export default function Warhammer() {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value={objective2}
+                value2={objective2}
                 label="Objective 2"
                 onChange={handleChange2}
               >
@@ -107,7 +107,7 @@ export default function Warhammer() {
                     console.log("element has been detected")
                   } 
                   return(
-                <MenuItem value={element.name}>{element.name}</MenuItem>
+                <MenuItem value2={element.name}>{element.name}</MenuItem>
                   );
                 })}
               
@@ -125,7 +125,7 @@ export default function Warhammer() {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value={objective3}
+                value3={objective3}
                 label="Objective 3"
                 onChange={handleChange3}
               >
@@ -134,7 +134,7 @@ export default function Warhammer() {
                     console.log("element has been detected")
                   } 
                   return(
-                <MenuItem value={element.name}>{element.name}</MenuItem>
+                <MenuItem value3={element.name}>{element.name}</MenuItem>
                   );
                 })}
               
