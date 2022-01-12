@@ -34,10 +34,10 @@ export default function Warhammer() {
   const [objective2, setObjective2] = React.useState('');
   const [objective3, setObjective3] = React.useState('');
 
-  const handleChange = (event) => {
-    setObjective1(event.target.value1);
-    setObjective2(event.target.value2);
-    setObjective3(event.target.value3);
+  const handleChange1 = (event) => {
+    setObjective1(event.target.value);
+    setObjective2(event.target.value);
+    setObjective3(event.target.value);
   };
  
   // Load all Warhammer 40k 2020 Objectives into this array.
