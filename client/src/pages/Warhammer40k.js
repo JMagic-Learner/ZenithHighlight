@@ -71,7 +71,7 @@ export default function Warhammer() {
                     console.log("element has been detected")
                   } 
                   return(
-                <MenuItem>{element.name}</MenuItem>
+                <MenuItem value={element.name}>{element.name}</MenuItem>
                   );
                 })}
               
@@ -132,10 +132,10 @@ export default function Warhammer() {
       <CardContent>
           <Item>
           <Typography> {element.category} </Typography>
-                <Typography> {element.name} </Typography>
-                <Typography> {element.priority} </Typography>
-                <Typography> {element.priorityDescription} </Typography>
-                <Typography> {element.description} </Typography>
+                <Typography>Objective: {element.name} </Typography>
+                <Typography>Priority: {element.priority} </Typography>
+                <Typography>When to score: {element.priorityDescription} </Typography>
+                <Typography>Description {element.description} </Typography>
           </Item>
           </CardContent>
         );
