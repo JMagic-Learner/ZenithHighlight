@@ -32,7 +32,7 @@ export default function Warhammer() {
 
   const [objective1, setObjective1] = React.useState('');
   const [objective2, setObjective2] = React.useState('');
-  const [objective3, setObjective2] = React.useState('');
+  const [objective3, setObjective3] = React.useState('');
 
   const handleChange = (event) => {
     setObjective1(event.target.value1);
