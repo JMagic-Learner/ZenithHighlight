@@ -54,6 +54,7 @@ export default function Warhammer() {
       <Typography sx={{ p: 2.0 }} variant="h2"> 40k Objectives</Typography>
       <Grid container spacing={2} style={{ display: "flex", justifyContent: "flex-start" }}>
 
+      <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
         <CardContent>
           <Item>
             <Typography> Objective 1 </Typography>
@@ -79,7 +80,7 @@ export default function Warhammer() {
             </FormControl>
           </Item>
         </CardContent>
-
+    </Grid>
         <CardContent>
           <Item>
             <Typography> Objective 2 </Typography>
