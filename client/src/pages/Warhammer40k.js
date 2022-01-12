@@ -30,10 +30,18 @@ export default function Warhammer() {
     console.log('We have succesfully queried objectives');
   }
 
-  const [objective, setObjective] = React.useState('');
+  const [objective1, setObjective1] = React.useState('');
+  const [objective2, setObjective2] = React.useState('');
+  const [objective3, setObjective2] = React.useState('');
 
-  const handleChange = (event) => {
-    setObjective(event.target.value);
+  const handleChange1 = (event) => {
+    setObjective1(event.target.value);
+  };
+  const handleChange2 = (event) => {
+    setObjective2(event.target.value);
+  };
+  const handleChange3 = (event) => {
+    setObjective3(event.target.value);
   };
   // Load all Warhammer 40k 2020 Objectives into this array.
   const ObjectivesArray = data?.objectives || [];
@@ -59,13 +67,13 @@ export default function Warhammer() {
           <Item>
             <Typography> Objective 1 </Typography>
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Age</InputLabel>
+              <InputLabel id="demo-simple-select-label">Objective 1</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value={objective}
+                value={objective1}
                 label="Objective 1"
-                onChange={handleChange}
+                onChange={handleChange1}
               >
                 {ObjectivesArray.map((element) => {
                    if(element) {
@@ -86,13 +94,13 @@ export default function Warhammer() {
           <Item>
             <Typography> Objective 2 </Typography>
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Age</InputLabel>
+              <InputLabel id="demo-simple-select-label">Objective 2</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value={objective}
+                value={objective2}
                 label="Objective 2"
-                onChange={handleChange}
+                onChange={handleChange2}
               >
                {ObjectivesArray.map((element) => {
                    if(element) {
@@ -113,13 +121,13 @@ export default function Warhammer() {
           <Item>
             <Typography> Objective 3 </Typography>
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Age</InputLabel>
+              <InputLabel id="demo-simple-select-label">Objective 3</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value={objective}
+                value={objective3}
                 label="Objective 3"
-                onChange={handleChange}
+                onChange={handleChange3}
               >
                {ObjectivesArray.map((element) => {
                    if(element) {
