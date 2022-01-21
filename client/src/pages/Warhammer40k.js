@@ -63,7 +63,7 @@ export default function Warhammer() {
   // Load all Warhammer 40k 2020 Objectives into this array.
   const ObjectivesArray = data?.objectives || [];
   console.log(ObjectivesArray);
-  const ObjectivesDescriptionArray = data?.objectivesByName.description || [];
+  const ObjectivesDescriptionArray = data1?.objectivesByName.description || [];
   if (ObjectivesDescriptionArray) {
       console.log("we have queried via nbame");
   }
