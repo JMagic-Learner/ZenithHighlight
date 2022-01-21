@@ -31,11 +31,9 @@ export default function Warhammer() {
   }
 
   const [objective1, setObjective1] = React.useState('');
-  const [description1, setDesription1] = React.useState('');
   const [objective2, setObjective2] = React.useState('');
   const [objective3, setObjective3] = React.useState('');
 
- let description2 = "";
 
   const handleChange1 = (event) => {
     setObjective1(event.target.value);
@@ -122,7 +120,6 @@ export default function Warhammer() {
               
               </Select>
             </FormControl>
-            <Typography> {element.description} </Typography>
           </Item>
         </CardContent>
 
