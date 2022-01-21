@@ -110,7 +110,9 @@ export default function Warhammer() {
                     console.log("element has been detected")
                   } 
                   return(
-                <MenuItem value={element.name}>{element.name}</MenuItem>
+                <MenuItem value={element.name}>{element.name}
+                <Typography> {element.description} </Typography>
+                </MenuItem>
                   );
                 })}
               
