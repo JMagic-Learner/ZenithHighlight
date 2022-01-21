@@ -30,7 +30,7 @@ export default function Warhammer() {
     console.log('We have succesfully queried objectives');
   }
 
-  const { loading, data } = useQuery(QUERY_NAME_OBJECTIVES, {
+  const { loading1, data1 } = useQuery(QUERY_NAME_OBJECTIVES, {
     variables: { name: objectiveName },
   });
 
@@ -62,7 +62,7 @@ export default function Warhammer() {
   // Load all Warhammer 40k 2020 Objectives into this array.
   const ObjectivesArray = data?.objectives || [];
   console.log(ObjectivesArray);
-  const ObjectivesDescriptionArray = data?.objectivesByName || [];
+  const ObjectivesDescriptionArray = data1?.objectivesByName || [];
   if (ObjectivesDescriptionArray) {
       Console.log("we have queried via nbame");
   }
