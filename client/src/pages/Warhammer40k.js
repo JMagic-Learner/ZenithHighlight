@@ -49,6 +49,7 @@ export default function Warhammer() {
     setObjective1(event.target.value);
     objectiveName = event.target.value;
     setDescription1(data1.objectivesByName.description);
+    console.log(setDescription1);
   };
 
   const handleChange2 = async (event) => {
@@ -104,13 +105,13 @@ export default function Warhammer() {
                   return(
                 <MenuItem value={element.name}>
                 <Typography> {element.name} </Typography>
-                <Typography display="block"> My text will be on the next line </Typography>
                 </MenuItem>
                   );
                 })}
               
               </Select>
             </FormControl>
+            <Typography> {description1} </Typography>
           </Item>
         </CardContent>
     </Grid>
