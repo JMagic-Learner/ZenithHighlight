@@ -63,7 +63,7 @@ export default function Warhammer() {
   console.log(ObjectivesArray);
   const ObjectivesDescriptionArray = data?.objectivesByName || [];
   if (ObjectivesDescriptionArray) {
-      Console.log("we have queried via nbame");
+      console.log("we have queried via nbame");
   }
 
   
