@@ -30,6 +30,10 @@ export default function Warhammer() {
     console.log('We have succesfully queried objectives');
   }
 
+  const { loading, data } = useQuery(QUERY_NAME_OBJECTIVES, {
+    variables: { name: objectiveName },
+  });
+
 
   const [objective1, setObjective1] = React.useState('');
   const [objective2, setObjective2] = React.useState('');
@@ -41,12 +45,10 @@ export default function Warhammer() {
 
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
-    let objectiveName = event.target.value;
-    const { loading, data } = useQuery(QUERY_NAME_OBJECTIVES, {
-      variables: { name: objectiveName },
-    });
-    const ObjectivesDescriptionArray = data?.objectivesByName || [];
-    console.log(ObjectivesDescriptionArray.description);
+    objectiveName = event.target.value;
+    
+    
+    
   };
 
   const handleChange2 = async (event) => {
@@ -60,6 +62,10 @@ export default function Warhammer() {
   // Load all Warhammer 40k 2020 Objectives into this array.
   const ObjectivesArray = data?.objectives || [];
   console.log(ObjectivesArray);
+  const ObjectivesDescriptionArray = data?.objectivesByName || [];
+  if (ObjectivesDescriptionArray) {
+      Console.log("we have queried via nbame");
+  }
 
   
   // const { loading1, objectiveNameFound } = useQuery(QUERY_NAME_OBJECTIVES);
