@@ -48,7 +48,7 @@ export default function Warhammer() {
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
     objectiveName = event.target.value;
-    setDescription1(data1.objectivesByName.description);
+    setDescription1(ObjectivesDescriptionArray);
     console.log(setDescription1);
   };
 
@@ -63,7 +63,7 @@ export default function Warhammer() {
   // Load all Warhammer 40k 2020 Objectives into this array.
   const ObjectivesArray = data?.objectives || [];
   console.log(ObjectivesArray);
-  const ObjectivesDescriptionArray = data?.objectivesByName || [];
+  const ObjectivesDescriptionArray = data?.objectivesByName.description || [];
   if (ObjectivesDescriptionArray) {
       console.log("we have queried via nbame");
   }
