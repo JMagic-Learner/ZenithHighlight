@@ -38,7 +38,7 @@ export default function Warhammer() {
     variables: { name: objectiveName },
   });
 
-  const descriptionArray = data1?.objectivesByName || [];
+  const descriptionArray = data1?.objectivesByName.description || [];
   console.log("Lets attempt to display the description of" + objectiveName);
   console.log(descriptionArray);
  
@@ -56,7 +56,6 @@ export default function Warhammer() {
     setObjective1(event.target.value);
     return event.target.value;
   };
-
 
   const handleChange2 = async (event) => {
     setObjective2(event.target.value);
