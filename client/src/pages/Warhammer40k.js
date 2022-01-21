@@ -34,9 +34,15 @@ export default function Warhammer() {
   const [objective2, setObjective2] = React.useState('');
   const [objective3, setObjective3] = React.useState('');
 
-  const handleChange = (event) => {
+  const handleChange1 = (event) => {
     setObjective1(event.target.value);
+  };
+
+  const handleChange2 = (event) => {
     setObjective2(event.target.value);
+  };
+
+  const handleChange3 = (event) => {
     setObjective3(event.target.value);
   };
  
@@ -70,7 +76,7 @@ export default function Warhammer() {
                 id="demo-simple-select"
                 value={objective1}
                 label="Objective 1"
-                onChange={handleChange}
+                onChange={handleChange1}
               >
                 {ObjectivesArray.map((element) => {
                    if(element) {
@@ -97,7 +103,7 @@ export default function Warhammer() {
                 id="demo-simple-select"
                 value={objective2}
                 label="Objective 2"
-                onChange={handleChange}
+                onChange={handleChange2}
               >
                {ObjectivesArray.map((element) => {
                    if(element) {
@@ -124,7 +130,7 @@ export default function Warhammer() {
                 id="demo-simple-select"
                 value={objective3}
                 label="Objective 3"
-                onChange={handleChange}
+                onChange={handleChange3}
               >
                {ObjectivesArray.map((element) => {
                    if(element) {
