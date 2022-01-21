@@ -78,7 +78,6 @@ export default function Warhammer() {
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={objective1}
-                description={description1}
                 label="Objective 1"
                 onChange={handleChange1}
               >
