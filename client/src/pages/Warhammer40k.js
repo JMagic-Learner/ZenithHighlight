@@ -30,26 +30,38 @@ export default function Warhammer() {
     console.log('We have succesfully queried objectives');
   }
 
+
   const [objective1, setObjective1] = React.useState('');
   const [objective2, setObjective2] = React.useState('');
   const [objective3, setObjective3] = React.useState('');
+  const [description1, setDescription1] = React.useState('');
+  const [description2, setDescription2] = React.useState('');
+  const [description3, setDescription3] = React.useState('');
 
 
-  const handleChange1 = (event) => {
+  const handleChange1 = async (event) => {
     setObjective1(event.target.value);
+    let objectiveName = event.target.value;
+    const { loading, data } = useQuery(QUERY_NAME_OBJECTIVES, {
+      variables: { name: objectiveName },
+    });
+    const ObjectivesDescriptionArray = data?.objectivesByName || [];
+    console.log(ObjectivesDescriptionArray.description);
   };
 
-  const handleChange2 = (event) => {
+  const handleChange2 = async (event) => {
     setObjective2(event.target.value);
   };
 
-  const handleChange3 = (event) => {
+  const handleChange3 = async (event) => {
     setObjective3(event.target.value);
   };
  
   // Load all Warhammer 40k 2020 Objectives into this array.
   const ObjectivesArray = data?.objectives || [];
   console.log(ObjectivesArray);
+
+  
   // const { loading1, objectiveNameFound } = useQuery(QUERY_NAME_OBJECTIVES);
   // if (objectiveNameFound) {
   //   console.log('We have succesfully queried objective by name');
