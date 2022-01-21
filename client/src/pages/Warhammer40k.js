@@ -38,8 +38,8 @@ export default function Warhammer() {
     variables: { name: objectiveName },
   });
 
-  const descriptionArray = data1?.objectivesByName.description || [];
-  console.log("Lets attempt to display the description of" + objectiveName);
+  const descriptionArray = data1?.objectivesByName.description;
+  console.log("Lets attempt to display the description of" + descriptionArray);
   console.log(descriptionArray);
  
 
