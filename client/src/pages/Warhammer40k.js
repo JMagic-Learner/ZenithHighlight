@@ -16,6 +16,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { letterSpacing } from '@mui/system';
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -32,9 +33,7 @@ export default function Warhammer() {
     console.log('We have succesfully queried objectives');
   }
 
-  const { loading1, data1 } = useQuery(QUERY_NAME_OBJECTIVES, {
-    variables: { name: objectiveName },
-  });
+ 
 
 
   const [objective1, setObjective1] = React.useState('');
@@ -47,10 +46,20 @@ export default function Warhammer() {
 
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
-    objectiveName = event.target.value;
-    setDescription1(ObjectivesDescriptionArray);
+     
+    const { objectiveName } = event.target.value;
+    const { loading1, data1 } = useQuery(QUERY_NAME_OBJECTIVES, {
+      variables: { name: objectiveName },
+    });
+    
+    const ObjectivesDescriptionArray = data1?.objectivesByName.description || [];
+  if (ObjectivesDescriptionArray) {
+      console.log("We have queried via name");
+  }
+  setDescription1(ObjectivesDescriptionArray);
     console.log(setDescription1);
   };
+
 
   const handleChange2 = async (event) => {
     setObjective2(event.target.value);
@@ -63,10 +72,7 @@ export default function Warhammer() {
   // Load all Warhammer 40k 2020 Objectives into this array.
   const ObjectivesArray = data?.objectives || [];
   console.log(ObjectivesArray);
-  const ObjectivesDescriptionArray = data1?.objectivesByName.description || [];
-  if (ObjectivesDescriptionArray) {
-      console.log("we have queried via nbame");
-  }
+  
 
   
   // const { loading1, objectiveNameFound } = useQuery(QUERY_NAME_OBJECTIVES);
@@ -111,7 +117,7 @@ export default function Warhammer() {
               
               </Select>
             </FormControl>
-            <Typography> {description1} </Typography>
+            <Typography > {description1} </Typography>
           </Item>
         </CardContent>
     </Grid>
