@@ -25,6 +25,8 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function Warhammer() {
+
+  let objectiveName = ''
   const { loading, data } = useQuery(QUERY_OBJECTIVES);
   if (data) {
     console.log('We have succesfully queried objectives');
@@ -45,10 +47,7 @@ export default function Warhammer() {
 
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
-    objectiveName = event.target.value;
-    
-    
-    
+    return objectiveName = event.target.value;
   };
 
   const handleChange2 = async (event) => {
@@ -62,7 +61,7 @@ export default function Warhammer() {
   // Load all Warhammer 40k 2020 Objectives into this array.
   const ObjectivesArray = data?.objectives || [];
   console.log(ObjectivesArray);
-  const ObjectivesDescriptionArray = data1?.objectivesByName || [];
+  const ObjectivesDescriptionArray = data?.objectivesByName || [];
   if (ObjectivesDescriptionArray) {
       Console.log("we have queried via nbame");
   }
