@@ -31,8 +31,11 @@ export default function Warhammer() {
   }
 
   const [objective1, setObjective1] = React.useState('');
+  const [description1, setDesription1] = React.useState('');
   const [objective2, setObjective2] = React.useState('');
   const [objective3, setObjective3] = React.useState('');
+
+ let description2 = "";
 
   const handleChange1 = (event) => {
     setObjective1(event.target.value);
@@ -75,6 +78,7 @@ export default function Warhammer() {
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={objective1}
+                description={description1}
                 label="Objective 1"
                 onChange={handleChange1}
               >
@@ -108,18 +112,21 @@ export default function Warhammer() {
                {ObjectivesArray.map((element) => {
                    if(element) {
                     console.log("element has been detected")
+                    description2 = element.description
                   } 
                   return(
-                <MenuItem value={element.name}>{element.name}
-                <Typography> {element.description} </Typography>
-                </MenuItem>
+                <MenuItem value={element.name}>{element.name} </MenuItem>
                   );
                 })}
               
-              </Select>
+              </Select>ssssssssssssssssssssssssssssssssssssssssssssssss
             </FormControl>
+            <Typography> {element.description} </Typography>
           </Item>
         </CardContent>
+
+
+
     </Grid>
     <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
         <CardContent>
