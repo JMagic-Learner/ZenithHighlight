@@ -33,9 +33,9 @@ export default function Warhammer() {
     console.log('We have succesfully queried objectives');
   }
 
-  const { objectiveName } = 'LINEBREAKER';
+  const { name } = 'LINEBREAKER';
   const { loading1, data1 } = useQuery(QUERY_NAME_OBJECTIVES, {
-    variables: { name: objectiveName },
+    variables: { name: name },
   });
 
   const descriptionArray = data1?.objectivesByName.description;
