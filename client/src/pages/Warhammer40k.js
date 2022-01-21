@@ -86,7 +86,10 @@ export default function Warhammer() {
                     console.log("element has been detected")
                   } 
                   return(
-                <MenuItem value={element.name}>{element.name}</MenuItem>
+                <MenuItem value={element.name}>
+                <Typography> {element.name} </Typography>
+                <Typography display="block"> My text will be on the next line </Typography>
+                </MenuItem>
                   );
                 })}
               
@@ -111,14 +114,13 @@ export default function Warhammer() {
                {ObjectivesArray.map((element) => {
                    if(element) {
                     console.log("element has been detected")
-                    description2 = element.description
                   } 
                   return(
                 <MenuItem value={element.name}>{element.name} </MenuItem>
                   );
                 })}
               
-              </Select>ssssssssssssssssssssssssssssssssssssssssssssssss
+              </Select>
             </FormControl>
             <Typography> {element.description} </Typography>
           </Item>
