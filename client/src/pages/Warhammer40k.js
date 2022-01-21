@@ -47,7 +47,8 @@ export default function Warhammer() {
 
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
-    return objectiveName = event.target.value;
+    objectiveName = event.target.value;
+    setDescription1(data1.objectivesByName.description);
   };
 
   const handleChange2 = async (event) => {
