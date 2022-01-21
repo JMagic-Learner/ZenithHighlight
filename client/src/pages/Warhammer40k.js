@@ -27,12 +27,16 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Warhammer() {
 
-  let objectiveName = ''
+  
   const { loading, data } = useQuery(QUERY_OBJECTIVES);
   if (data) {
     console.log('We have succesfully queried objectives');
   }
 
+  const { objectiveName } = handleChange1;
+  const { loading1, data1 } = useQuery(QUERY_NAME_OBJECTIVES, {
+    variables: { name: objectiveName },
+  });
  
 
 
@@ -46,18 +50,7 @@ export default function Warhammer() {
 
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
-     
-    const { objectiveName } = event.target.value;
-    const { loading1, data1 } = useQuery(QUERY_NAME_OBJECTIVES, {
-      variables: { name: objectiveName },
-    });
-    
-    const ObjectivesDescriptionArray = data1?.objectivesByName.description || [];
-  if (ObjectivesDescriptionArray) {
-      console.log("We have queried via name");
-  }
-  setDescription1(ObjectivesDescriptionArray);
-    console.log(setDescription1);
+    return event.target.value;
   };
 
 
@@ -71,7 +64,6 @@ export default function Warhammer() {
  
   // Load all Warhammer 40k 2020 Objectives into this array.
   const ObjectivesArray = data?.objectives || [];
-  console.log(ObjectivesArray);
   
 
   
