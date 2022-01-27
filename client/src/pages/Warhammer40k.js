@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { styled } from '@mui/material/styles';
-import DescriptionByName from '../components/DescriptionByName';
+// import DescriptionByName from '../components/DescriptionByName';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import { useQuery } from '@apollo/client';
@@ -111,7 +111,7 @@ export default function Warhammer() {
         </CardContent>
     </Grid>
 
-   <DescriptionByName objectiveName={objectivename1}/> 
+ 
 
     <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
         <CardContent>
