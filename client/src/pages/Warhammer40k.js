@@ -17,6 +17,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { letterSpacing } from '@mui/system';
+import { renderToStringWithData } from '@apollo/client/react/ssr';
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -33,14 +34,10 @@ export default function Warhammer() {
     console.log('We have succesfully queried objectives');
   }
 
-  const { name } = 'LINEBREAKER';
-  const { loading1, data1 } = useQuery(QUERY_NAME_OBJECTIVES, {
-    variables: { name: name },
-  });
 
-  const descriptionArray = data1?.objectivesByName || [];
-  console.log("Lets attempt to display the description of" + descriptionArray.description);
-  console.log(descriptionArray.description);
+  
+
+ 
  
 
 
@@ -52,8 +49,20 @@ export default function Warhammer() {
   const [description3, setDescription3] = React.useState('');
 
 
+  const searchName1 = async(name) => {
+    const { loading1, data1 } = useQuery(QUERY_NAME_OBJECTIVES, {
+      variables: { name: name },
+    });
+    const descriptionArray = data1?.objectivesByName || [];
+    console.log("Lets attempt to display the description of" + descriptionArray.description);
+    return(
+      <Typography> {descriptionArray.description} </Typography>
+    )
+  }
+
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
+    searchName1(event.target.value)
     return event.target.value;
   };
 
@@ -112,10 +121,14 @@ export default function Warhammer() {
               
               </Select>
             </FormControl>
-            <Typography > {description1} </Typography>
+            {searchName1}
           </Item>
         </CardContent>
     </Grid>
+
+
+
+
     <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
         <CardContent>
           <Item>
@@ -142,10 +155,10 @@ export default function Warhammer() {
             </FormControl>
           </Item>
         </CardContent>
-
-
-
     </Grid>
+
+
+
     <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
         <CardContent>
           <Item>
@@ -175,7 +188,7 @@ export default function Warhammer() {
     </Grid>
 
      
-        <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
+        {/* <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
         {ObjectivesArray.map((element) => {
         if(element) {
         console.log("element has been detected")
@@ -195,7 +208,7 @@ export default function Warhammer() {
         );
             })
           }
-        </Grid>
+        </Grid> */}
     
         
         
