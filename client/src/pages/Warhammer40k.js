@@ -4,20 +4,16 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { styled } from '@mui/material/styles';
-
+import DescriptionByName from '../components/DescriptionByName';
 import Grid from '@mui/material/Grid';
-
 import Paper from '@mui/material/Paper';
 import { useQuery } from '@apollo/client';
 import { QUERY_OBJECTIVES } from '../utils/queries';
-import { QUERY_NAME_OBJECTIVES } from '../utils/queries';
-import { QUERY_CAT_OBJECTIVES } from '../utils/queries';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { letterSpacing } from '@mui/system';
-import { renderToStringWithData } from '@apollo/client/react/ssr';
+
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -38,28 +34,9 @@ export default function Warhammer() {
     console.log('We have succesfully queried objectives');
   }
 
-  
- 
-
-
   const [objective1, setObjective1] = React.useState('');
   const [objective2, setObjective2] = React.useState('');
   const [objective3, setObjective3] = React.useState('');
-  const [description1, setDescription1] = React.useState('');
-  const [description2, setDescription2] = React.useState('');
-  const [description3, setDescription3] = React.useState('');
-
-  const { loading1, data1 } =  useQuery(QUERY_NAME_OBJECTIVES, {
-    variables: { name: objectivename1 },
-  });
-  
-  if (data1) {
-    console.log("We have succesfully queried objectives by name");
-  }
-  if (loading1) {
-    console.log("We are loading");
-  }
-  
 
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
@@ -85,7 +62,7 @@ export default function Warhammer() {
   // Load all Warhammer 40k 2020 Objectives into this array.
   
   const ObjectivesArray = data?.objectives || [];
-  const DescriptionArray = data1?.objectivesByName || [];
+  
   
   // const { loading1, objectiveNameFound } = useQuery(QUERY_NAME_OBJECTIVES);
   // if (objectiveNameFound) {
@@ -134,21 +111,7 @@ export default function Warhammer() {
         </CardContent>
     </Grid>
 
-    <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
-      <Typography> DESCRIPTION </Typography>
-      {DescriptionArray.map((element) => {
-        if(element) {
-          console.log("Element for DescriptionArray has been detected");
-        }
-        return(
-          <Typography> {element.description} </Typography>
-        );
-        })}
-    </Grid>
-    
-
-
-
+   <DescriptionByName objectiveName={objectivename1}/> 
 
     <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
         <CardContent>
