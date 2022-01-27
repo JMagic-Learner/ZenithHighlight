@@ -47,7 +47,7 @@ export default function Warhammer() {
 
 
   
-    const { loading1, data1 } = await useQuery(QUERY_NAME_OBJECTIVES, {
+    const { loading1, data1 } =  useQuery(QUERY_NAME_OBJECTIVES, {
       variables: { name: objectivename1 },
     });
     
