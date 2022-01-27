@@ -38,18 +38,8 @@ export default function Warhammer() {
     console.log('We have succesfully queried objectives');
   }
 
-  const { loading1, error, data1 } =  useQuery(QUERY_NAME_OBJECTIVES, {
-    variables: { name: {objectivename1} },
-  });
-  if (data1) {
-    console.log("We have succesfully queried objectives by name");
-  }
-  if (loading1) return 'Loading';
-  if (error) return `Error! ${error.message}`;
-
   const ObjectivesArray = data?.objectives || [];
-  const DescriptionArray = data1?.objectivesByName || [];
-
+ 
 
 
   const [objective1, setObjective1] = React.useState('');
@@ -59,6 +49,14 @@ export default function Warhammer() {
   const [description2, setDescription2] = React.useState('');
   const [description3, setDescription3] = React.useState('');
 
+  const { loading1, error, data1 } =  useQuery(QUERY_NAME_OBJECTIVES, {
+    variables: { name: objectivename1 },
+  });
+  const DescriptionArray = data1?.objectivesByName || [];
+  if (data1) {
+    console.log("We have succesfully queried objectives by name");
+  if (loading1) return 'Loading';
+  if (error) return `Error! ${error.message}`;
 
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
