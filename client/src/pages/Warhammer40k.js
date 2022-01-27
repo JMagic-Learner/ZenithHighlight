@@ -49,7 +49,7 @@ export default function Warhammer() {
   const [description2, setDescription2] = React.useState('');
   const [description3, setDescription3] = React.useState('');
 
-  const { loading1, error, data1 } =  useQuery(QUERY_NAME_OBJECTIVES, {
+  const { loading1, data1 } =  useQuery(QUERY_NAME_OBJECTIVES, {
     variables: { name: objectivename1 },
   });
   const DescriptionArray = data1?.objectivesByName || [];
@@ -58,9 +58,7 @@ export default function Warhammer() {
   if (loading1) {
     console.log("We are loading");
   }
-  if (error) {
-    console.log(error.message);
-  }
+  
 
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
