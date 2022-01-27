@@ -46,19 +46,14 @@ export default function Warhammer() {
   const [description3, setDescription3] = React.useState('');
 
 
-  function SearchName1 (props){
-    const { loading1, data1 } = useQuery(QUERY_NAME_OBJECTIVES, {
-      variables: { name: props },
+  
+    const { loading1, data1 } = await useQuery(QUERY_NAME_OBJECTIVES, {
+      variables: { name: objectivename1 },
     });
-    if(loading) {
-      console.log ("we have queried QUERY_NAME_OBJECTS");
-    }
-    const descriptionArray = data1?.objectivesByName || [];
-    console.log("Lets attempt to display the description of" + descriptionArray.description);
-    return(
-      <Typography> {descriptionArray.description} </Typography>
-    )
-  }
+    
+    const DescriptionArray = data1?.objectivesByName || [];
+    
+  
 
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
@@ -134,7 +129,15 @@ export default function Warhammer() {
     </Grid>
 
     <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
-      <Typography> {description1} </Typography>
+      
+      {DescriptionArray.map((element) => {
+        if(element) {
+          console.log("Element for DescriptionArray has been detected");
+        }
+        return(
+          <Typography> {element.description} </Typography>
+        );
+        })}
     </Grid>
     
 
