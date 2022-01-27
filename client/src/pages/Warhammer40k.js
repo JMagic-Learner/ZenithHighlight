@@ -28,6 +28,10 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Warhammer() {
 
+  let objectivename1 = "";
+  let objectivename2 = "";
+  let objectivename3 = "";
+
   
   const { loading, data } = useQuery(QUERY_OBJECTIVES);
   if (data) {
@@ -35,7 +39,7 @@ export default function Warhammer() {
   }
 
   const { loading1, error, data1 } =  useQuery(QUERY_NAME_OBJECTIVES, {
-    variables: { name },
+    variables: { name: {objectivename1} },
   });
   if (data1) {
     console.log("We have succesfully queried objectives by name");
@@ -46,9 +50,7 @@ export default function Warhammer() {
   const ObjectivesArray = data?.objectives || [];
   const DescriptionArray = data1?.objectivesByName || [];
 
-  let objectivename1 = "";
-  let objectivename2 = "";
-  let objectivename3 = "";
+
 
   const [objective1, setObjective1] = React.useState('');
   const [objective2, setObjective2] = React.useState('');
