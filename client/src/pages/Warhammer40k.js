@@ -78,7 +78,7 @@ export default function Warhammer() {
 
     <Box sx={{ flexGrow: 1 }}>
       <Typography sx={{ p: 2.0 }} variant="h2"> 40k Objectives</Typography>
-      <Grid container spacing={2} style={{ display: "flex", justifyContent: "flex-start" }}>
+      <Grid container spacing={2} style={{ display: "flex", justifyContent: "flex-start", wordWrap: 'break-word' }}>
 
       <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
         <CardContent>
@@ -92,7 +92,7 @@ export default function Warhammer() {
                 value={objective1}
                 label="Objective 1"
                 onChange={handleChange1}
-                style={{ wordWrap: 'break-word' }}
+               
               >
                 {ObjectivesArray.map((element) => {
                    if(element) {
@@ -106,7 +106,7 @@ export default function Warhammer() {
                 <Typography>Objective: {element.name} </Typography>
                 <Typography>Priority: {element.priority} </Typography>
                 <Typography>When to score: {element.priorityDescription} </Typography>
-                <Typography style={{ wordWrap: 'break-word' }}>Description {element.description} </Typography>
+                <Typography>Description {element.description} </Typography>
           </Item>
           </CardContent>
                 </MenuItem>
@@ -134,7 +134,6 @@ export default function Warhammer() {
                 value={objective2}
                 label="Objective 2"
                 onChange={handleChange2}
-                style={{ wordWrap: 'break-word' }}
               >
                {ObjectivesArray.map((element) => {
                    if(element) {
@@ -148,7 +147,7 @@ export default function Warhammer() {
                 <Typography>Objective: {element.name} </Typography>
                 <Typography>Priority: {element.priority} </Typography>
                 <Typography>When to score: {element.priorityDescription} </Typography>
-                <Typography style={{ wordWrap: 'break-word' }}>Description {element.description} </Typography>
+                <Typography >Description {element.description} </Typography>
           </Item>
           </CardContent>
                 </MenuItem>
@@ -175,7 +174,6 @@ export default function Warhammer() {
                 value={objective3}
                 label="Objective 3"
                 onChange={handleChange3}
-                style={{ wordWrap: 'break-word' }}
               >
                {ObjectivesArray.map((element) => {
                    if(element) {
@@ -189,7 +187,7 @@ export default function Warhammer() {
                       <Typography>Objective: {element.name} </Typography>
                       <Typography>Priority: {element.priority} </Typography>
                       <Typography>When to score: {element.priorityDescription} </Typography>
-                      <Typography style={{ wordWrap: 'break-word' }}>Description {element.description} </Typography>
+                      <Typography>Description {element.description} </Typography>
                 </Item>
                 </CardContent>
                 </MenuItem>
