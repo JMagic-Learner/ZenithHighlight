@@ -201,7 +201,7 @@ export default function Warhammer() {
     </Grid>
 
      
-        {/* <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
+        <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
         {ObjectivesArray.map((element) => {
         if(element) {
         console.log("element has been detected")
@@ -221,7 +221,7 @@ export default function Warhammer() {
         );
             })
           }
-        </Grid> */}
+        </Grid>
     
         
         
