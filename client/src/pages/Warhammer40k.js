@@ -52,7 +52,9 @@ export default function Warhammer() {
     });
     
     const DescriptionArray = data1?.objectivesByName || [];
-    
+    if (data1) {
+      console.log("We have succesfully queried objectives by name");
+    }
   
 
   const handleChange1 = async (event) => {
