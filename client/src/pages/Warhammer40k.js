@@ -92,6 +92,7 @@ export default function Warhammer() {
                 value={objective1}
                 label="Objective 1"
                 onChange={handleChange1}
+                style={{ wordWrap: 'break-word' }}
               >
                 {ObjectivesArray.map((element) => {
                    if(element) {
@@ -133,6 +134,7 @@ export default function Warhammer() {
                 value={objective2}
                 label="Objective 2"
                 onChange={handleChange2}
+                style={{ wordWrap: 'break-word' }}
               >
                {ObjectivesArray.map((element) => {
                    if(element) {
@@ -173,6 +175,7 @@ export default function Warhammer() {
                 value={objective3}
                 label="Objective 3"
                 onChange={handleChange3}
+                style={{ wordWrap: 'break-word' }}
               >
                {ObjectivesArray.map((element) => {
                    if(element) {
