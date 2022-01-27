@@ -38,7 +38,7 @@ export default function Warhammer() {
     console.log('We have succesfully queried objectives');
   }
 
-  const ObjectivesArray = data?.objectives || [];
+  
  
 
 
@@ -52,9 +52,10 @@ export default function Warhammer() {
   const { loading1, data1 } =  useQuery(QUERY_NAME_OBJECTIVES, {
     variables: { name: objectivename1 },
   });
-  const DescriptionArray = data1?.objectivesByName || [];
+  
   if (data1) {
     console.log("We have succesfully queried objectives by name");
+  }
   if (loading1) {
     console.log("We are loading");
   }
@@ -83,8 +84,8 @@ export default function Warhammer() {
  
   // Load all Warhammer 40k 2020 Objectives into this array.
   
-  
-
+  const ObjectivesArray = data?.objectives || [];
+  const DescriptionArray = data1?.objectivesByName || [];
   
   // const { loading1, objectiveNameFound } = useQuery(QUERY_NAME_OBJECTIVES);
   // if (objectiveNameFound) {
@@ -238,4 +239,5 @@ export default function Warhammer() {
     </Box>
      
   );
-        }}
+        }
+      
