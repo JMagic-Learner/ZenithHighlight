@@ -34,6 +34,9 @@ export default function Warhammer() {
     console.log('We have succesfully queried objectives');
   }
 
+  let objectivename1 = "";
+  let objectivename2 = "";
+  let objectivename3 = "";
 
   const [objective1, setObjective1] = React.useState('');
   const [objective2, setObjective2] = React.useState('');
@@ -59,15 +62,23 @@ export default function Warhammer() {
 
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
-    setDescription1(event.target.description);
+    objectivename1 = event.target.value;
+    console.log(objectivename1);
+    return objectivename1;
   };
 
   const handleChange2 = async (event) => {
     setObjective2(event.target.value);
+    objectivename2 = event.target.value;
+    console.log(objectivename2);
+    return objectivename2;
   };
 
   const handleChange3 = async (event) => {
     setObjective3(event.target.value);
+    objectivename3 = event.target.value;
+    console.log(objectivename3);
+    return objectivename3;
   };
  
   // Load all Warhammer 40k 2020 Objectives into this array.
@@ -109,7 +120,7 @@ export default function Warhammer() {
                     console.log("element has been detected")
                   } 
                   return(
-                <MenuItem value={element.name} id={element.description}>
+                <MenuItem value={element.name}>
                 <Typography> {element.name} </Typography>
                 </MenuItem>
                   );
