@@ -35,12 +35,6 @@ export default function Warhammer() {
   }
 
 
-  
-
- 
- 
-
-
   const [objective1, setObjective1] = React.useState('');
   const [objective2, setObjective2] = React.useState('');
   const [objective3, setObjective3] = React.useState('');
@@ -53,6 +47,9 @@ export default function Warhammer() {
     const { loading1, data1 } = useQuery(QUERY_NAME_OBJECTIVES, {
       variables: { name: props },
     });
+    if(loading) {
+      console.log ("we have queried QUERY_NAME_OBJECTS");
+    }
     const descriptionArray = data1?.objectivesByName || [];
     console.log("Lets attempt to display the description of" + descriptionArray.description);
     return(
@@ -62,8 +59,7 @@ export default function Warhammer() {
 
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
-    SearchName1(event.target.value)
-    return event.target.value;
+    setDescription1(event.target.description);
   };
 
   const handleChange2 = async (event) => {
@@ -113,7 +109,7 @@ export default function Warhammer() {
                     console.log("element has been detected")
                   } 
                   return(
-                <MenuItem value={element.name}>
+                <MenuItem value={element.name} id={element.description}>
                 <Typography> {element.name} </Typography>
                 </MenuItem>
                   );
@@ -121,10 +117,15 @@ export default function Warhammer() {
               
               </Select>
             </FormControl>
-            {SearchName1}
+            
           </Item>
         </CardContent>
     </Grid>
+
+    <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
+      <Typography> {description1} </Typography>
+    </Grid>
+    
 
 
 
