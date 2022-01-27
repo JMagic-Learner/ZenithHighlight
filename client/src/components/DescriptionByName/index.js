@@ -1,9 +1,20 @@
 import React, { useState } from 'react';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import { styled } from '@mui/material/styles';
 import { useQuery } from '@apollo/client';
 import { QUERY_NAME_OBJECTIVES } from '../../utils/queries';
 import CardContent from '@mui/material/CardContent';
 import { useParams } from 'react-router-dom';
 import { Typography } from '@mui/material';
+
+const Item = styled(Paper)(({ theme }) => ({
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'left',
+    color: theme.palette.text.secondary,
+  }));
+  
 
 export default function DescriptionByName() {
 
