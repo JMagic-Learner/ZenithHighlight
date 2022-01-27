@@ -55,8 +55,12 @@ export default function Warhammer() {
   const DescriptionArray = data1?.objectivesByName || [];
   if (data1) {
     console.log("We have succesfully queried objectives by name");
-  if (loading1) return 'Loading';
-  if (error) return `Error! ${error.message}`;
+  if (loading1) {
+    console.log("We are loading");
+  }
+  if (error) {
+    console.log(error.message);
+  }
 
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
