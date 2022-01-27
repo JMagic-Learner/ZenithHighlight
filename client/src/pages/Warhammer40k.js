@@ -34,6 +34,18 @@ export default function Warhammer() {
     console.log('We have succesfully queried objectives');
   }
 
+  const { loading1, error, data1 } =  useQuery(QUERY_NAME_OBJECTIVES, {
+    variables: { name },
+  });
+  if (data1) {
+    console.log("We have succesfully queried objectives by name");
+  }
+  if (loading1) return 'Loading';
+  if (error) return `Error! ${error.message}`;
+
+  const ObjectivesArray = data?.objectives || [];
+  const DescriptionArray = data1?.objectivesByName || [];
+
   let objectivename1 = "";
   let objectivename2 = "";
   let objectivename3 = "";
@@ -45,17 +57,6 @@ export default function Warhammer() {
   const [description2, setDescription2] = React.useState('');
   const [description3, setDescription3] = React.useState('');
 
-
-  
-    const { loading1, data1 } =  useQuery(QUERY_NAME_OBJECTIVES, {
-      variables: { name: objectivename1 },
-    });
-    
-    const DescriptionArray = data1?.objectivesByName || [];
-    if (data1) {
-      console.log("We have succesfully queried objectives by name");
-    }
-  
 
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
@@ -79,7 +80,7 @@ export default function Warhammer() {
   };
  
   // Load all Warhammer 40k 2020 Objectives into this array.
-  const ObjectivesArray = data?.objectives || [];
+  
   
 
   
@@ -131,7 +132,7 @@ export default function Warhammer() {
     </Grid>
 
     <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
-      
+      <Typography> DESCRIPTION </Typography>
       {DescriptionArray.map((element) => {
         if(element) {
           console.log("Element for DescriptionArray has been detected");
