@@ -49,9 +49,9 @@ export default function Warhammer() {
   const [description3, setDescription3] = React.useState('');
 
 
-  const searchName1 = async(name) => {
+  function SearchName1 (props){
     const { loading1, data1 } = useQuery(QUERY_NAME_OBJECTIVES, {
-      variables: { name: name },
+      variables: { name: props },
     });
     const descriptionArray = data1?.objectivesByName || [];
     console.log("Lets attempt to display the description of" + descriptionArray.description);
@@ -62,7 +62,7 @@ export default function Warhammer() {
 
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
-    searchName1(event.target.value)
+    SearchName1(event.target.value)
     return event.target.value;
   };
 
@@ -121,7 +121,7 @@ export default function Warhammer() {
               
               </Select>
             </FormControl>
-            {searchName1}
+            {SearchName1}
           </Item>
         </CardContent>
     </Grid>
