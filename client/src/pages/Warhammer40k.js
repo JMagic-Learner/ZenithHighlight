@@ -99,7 +99,7 @@ export default function Warhammer() {
                       console.log("element has been detected")
                     }
                     return (
-                      <MenuItem value={element.name} style={{whiteSpace: 'normal'}}>
+                      <MenuItem value={element.name} style={{display: "flex", whiteSpace: 'normal'}}>
                         <CardContent>
                           <Item>
                             <Typography> {element.category} </Typography>
