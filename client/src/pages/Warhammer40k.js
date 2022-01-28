@@ -85,7 +85,7 @@ export default function Warhammer() {
             <Item>
               <Typography> Objective 1 </Typography>
               <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Objective 1</InputLabel>
+                <InputLabel id="demo-simple-select-label">Select Objective 1</InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
@@ -99,7 +99,7 @@ export default function Warhammer() {
                       console.log("element has been detected")
                     }
                     return (
-                      <MenuItem value={element.name} style={{wordWrap: 'break-word'}}>
+                      <MenuItem value={element.name} style={{whiteSpace: 'normal'}}>
                         <CardContent>
                           <Item>
                             <Typography> {element.category} </Typography>
@@ -127,7 +127,7 @@ export default function Warhammer() {
             <Item>
               <Typography> Objective 2 </Typography>
               <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Objective 2</InputLabel>
+                <InputLabel id="demo-simple-select-label">Select Objective 2</InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
@@ -140,7 +140,7 @@ export default function Warhammer() {
                       console.log("element has been detected")
                     }
                     return (
-                      <MenuItem value={element.name}>
+                      <MenuItem value={element.name} style={{whiteSpace: 'normal'}}>
                         <CardContent>
                           <Item>
                             <Typography> {element.category} </Typography>
@@ -167,7 +167,7 @@ export default function Warhammer() {
             <Item>
               <Typography> Objective 3 </Typography>
               <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Objective 3</InputLabel>
+                <InputLabel id="demo-simple-select-label">Select Objective 3</InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
@@ -180,7 +180,7 @@ export default function Warhammer() {
                       console.log("element has been detected")
                     }
                     return (
-                      <MenuItem value={element.name}>
+                      <MenuItem value={element.name} style={{whiteSpace: 'normal'}}>
                         <CardContent>
                           <Item>
                             <Typography> {element.category} </Typography>
