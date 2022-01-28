@@ -20,6 +20,8 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),
   textAlign: 'left',
   color: theme.palette.text.secondary,
+  whiteSpace: "unset",
+  wordBreak: "break-all"
 }));
 
 export default function Warhammer() {
@@ -78,7 +80,7 @@ export default function Warhammer() {
 
     <Box sx={{ flexGrow: 1 }}>
       <Typography sx={{ p: 2.0 }} variant="h2"> 40k Objectives</Typography>
-      <Grid container spacing={2} style={{ display: "flex", justifyContent: "flex-start", wordWrap: 'break-word' }}>
+      <Grid container spacing={2} style={{ display: "flex", justifyContent: "flex-start"}}>
 
         <Grid item xs={10} sm={10} md={10} sx={{ m: 'auto' }}>
           <CardContent>
@@ -101,7 +103,7 @@ export default function Warhammer() {
                     return (
                       <MenuItem value={element.name} style={{ whiteSpace: 'normal'}}>
                         <CardContent>
-                          <Item style={{wordWrap: 'break-all'}}>
+                          <Item>
                             <Typography> {element.category} </Typography>
                             <Typography>Objective: {element.name} </Typography>
                             <Typography>Priority: {element.priority} </Typography>
@@ -140,7 +142,7 @@ export default function Warhammer() {
                       console.log("element has been detected")
                     }
                     return (
-                      <MenuItem value={element.name} style={{whiteSpace: 'normal'}}>
+                      <MenuItem value={element.name}>
                         <CardContent>
                           <Item>
                             <Typography> {element.category} </Typography>
@@ -180,7 +182,7 @@ export default function Warhammer() {
                       console.log("element has been detected")
                     }
                     return (
-                      <MenuItem value={element.name} style={{whiteSpace: 'normal'}}>
+                      <MenuItem value={element.name}>
                         <CardContent>
                           <Item>
                             <Typography> {element.category} </Typography>
