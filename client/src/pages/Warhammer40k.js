@@ -80,7 +80,7 @@ export default function Warhammer() {
       <Typography sx={{ p: 2.0 }} variant="h2"> 40k Objectives</Typography>
       <Grid container spacing={2} style={{ display: "flex", justifyContent: "flex-start", wordWrap: 'break-word' }}>
 
-        <Grid item xs={12} sm={12} md={12} sx={{ m: 'auto' }}>
+        <Grid item xs={10} sm={10} md={10} sx={{ m: 'auto' }}>
           <CardContent>
             <Item>
               <Typography> Objective 1 </Typography>
@@ -99,7 +99,7 @@ export default function Warhammer() {
                       console.log("element has been detected")
                     }
                     return (
-                      <MenuItem value={element.name} style={{display: "flex", whiteSpace: 'normal'}}>
+                      <MenuItem value={element.name} style={{wordWrap: 'break-word', whiteSpace: 'normal'}}>
                         <CardContent>
                           <Item>
                             <Typography> {element.category} </Typography>
