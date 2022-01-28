@@ -99,9 +99,9 @@ export default function Warhammer() {
                       console.log("element has been detected")
                     }
                     return (
-                      <MenuItem value={element.name} style={{wordWrap: 'break-word', whiteSpace: 'normal'}}>
+                      <MenuItem value={element.name} style={{ whiteSpace: 'normal'}}>
                         <CardContent>
-                          <Item>
+                          <Item style={{wordWrap: 'break-word'}}>
                             <Typography> {element.category} </Typography>
                             <Typography>Objective: {element.name} </Typography>
                             <Typography>Priority: {element.priority} </Typography>
