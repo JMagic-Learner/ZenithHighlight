@@ -101,7 +101,7 @@ export default function Warhammer() {
                     return (
                       <MenuItem value={element.name} style={{ whiteSpace: 'normal'}}>
                         <CardContent>
-                          <Item style={{wordWrap: 'break-word'}}>
+                          <Item style={{wordWrap: 'break-all'}}>
                             <Typography> {element.category} </Typography>
                             <Typography>Objective: {element.name} </Typography>
                             <Typography>Priority: {element.priority} </Typography>
