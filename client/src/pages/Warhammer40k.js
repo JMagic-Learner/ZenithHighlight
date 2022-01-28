@@ -20,11 +20,13 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),
   textAlign: 'left',
   color: theme.palette.text.secondary,
-  whiteSpace: "unset",
+  whiteSpace: "pre-wrap",
   wordBreak: "break-all"
 }));
 
 export default function Warhammer() {
+
+  const classes = Item();
 
   let objectivename1 = "";
   let objectivename2 = "";
