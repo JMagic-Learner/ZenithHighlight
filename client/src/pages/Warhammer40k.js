@@ -103,7 +103,7 @@ export default function Warhammer() {
                     return (
                       <MenuItem value={element.name} >
                         <CardContent>
-                          <Item style={{ whiteSpace: 'normal', wordBreak: "pre-wrap"}}>
+                          <Item style={{ whiteSpace: 'normal', wordBreak: "break-word"}}>
                             <Typography> {element.category} </Typography>
                             <Typography>Objective: {element.name} </Typography>
                             <Typography>Priority: {element.priority} </Typography>
@@ -144,7 +144,7 @@ export default function Warhammer() {
                     return (
                       <MenuItem value={element.name}>
                         <CardContent>
-                          <Item style={{ whiteSpace: 'normal', wordBreak: "pre-wrap"}}>
+                          <Item style={{ whiteSpace: 'normal', wordBreak: "break-word"}}>
                             <Typography> {element.category} </Typography>
                             <Typography>Objective: {element.name} </Typography>
                             <Typography>Priority: {element.priority} </Typography>
@@ -184,7 +184,7 @@ export default function Warhammer() {
                     return (
                       <MenuItem value={element.name}>
                         <CardContent>
-                          <Item style={{ whiteSpace: 'normal', wordBreak: "prewrap"}}>
+                          <Item style={{ whiteSpace: 'normal', wordBreak: "break-word"}}>
                             <Typography> {element.category} </Typography>
                             <Typography>Objective: {element.name} </Typography>
                             <Typography>Priority: {element.priority} </Typography>
