@@ -20,13 +20,11 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),
   textAlign: 'left',
   color: theme.palette.text.secondary,
-  whiteSpace: "pre-wrap",
+  whiteSpace: "unset",
   wordBreak: "break-all"
 }));
 
 export default function Warhammer() {
-
-  const classes = Item();
 
   let objectivename1 = "";
   let objectivename2 = "";
@@ -103,9 +101,9 @@ export default function Warhammer() {
                       console.log("element has been detected")
                     }
                     return (
-                      <MenuItem value={element.name} style={{ whiteSpace: 'normal'}}>
+                      <MenuItem value={element.name} >
                         <CardContent>
-                          <Item>
+                          <Item style={{ whiteSpace: 'normal', wordBreak: "pre-wrap"}}>
                             <Typography> {element.category} </Typography>
                             <Typography>Objective: {element.name} </Typography>
                             <Typography>Priority: {element.priority} </Typography>
@@ -146,7 +144,7 @@ export default function Warhammer() {
                     return (
                       <MenuItem value={element.name}>
                         <CardContent>
-                          <Item>
+                          <Item style={{ whiteSpace: 'normal', wordBreak: "pre-wrap"}}>
                             <Typography> {element.category} </Typography>
                             <Typography>Objective: {element.name} </Typography>
                             <Typography>Priority: {element.priority} </Typography>
@@ -186,7 +184,7 @@ export default function Warhammer() {
                     return (
                       <MenuItem value={element.name}>
                         <CardContent>
-                          <Item>
+                          <Item style={{ whiteSpace: 'normal', wordBreak: "prewrap"}}>
                             <Typography> {element.category} </Typography>
                             <Typography>Objective: {element.name} </Typography>
                             <Typography>Priority: {element.priority} </Typography>
