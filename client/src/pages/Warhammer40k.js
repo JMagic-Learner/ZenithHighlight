@@ -1,10 +1,8 @@
 import * as React from 'react';
 import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { styled } from '@mui/material/styles';
-// import DescriptionByName from '../components/DescriptionByName';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import { useQuery } from '@apollo/client';
@@ -13,6 +11,17 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+
+//Core code sourced from https://www.tutorialfunda.com/reactjs/increment-decrement-number-using-react-hooks-counter/ //
+//Button Display//
+import { ButtonIncrement } from '../components/IncrementButtons';
+import ButtonDecrement from '../components/DecrementButtons';
+import Display from '../components/Display';
+import { VPIncrement } from '../components/IncrementVPButtons';
+import  VPDecrement  from '../components/DecrementVPButtons';
+import { CPIncrement } from '../components/IncrementCPButtons';
+import CPDecrement from '../components/DecrementCPButtons';
+
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -25,11 +34,10 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function Warhammer() {
-
+  
   let objectivename1 = "";
   let objectivename2 = "";
   let objectivename3 = "";
-
 
   const { loading, data } = useQuery(QUERY_OBJECTIVES);
   if (data) {
@@ -39,6 +47,17 @@ export default function Warhammer() {
   const [objective1, setObjective1] = React.useState('');
   const [objective2, setObjective2] = React.useState('');
   const [objective3, setObjective3] = React.useState('');
+  const [roundCount, setroundCount] = React.useState(1);
+  const [vpCount, setvpCount] = React.useState(0);
+  const [cpCount, setcpCount] = React.useState(12);
+  const incrementRound = () => setroundCount(roundCount + 1);
+  let decrementRound = () => setroundCount(roundCount - 1);
+  const incrementVP = () => setvpCount(vpCount + 1);
+  let decrementVP = () => setvpCount(vpCount - 1);
+  const incrementCP = () => setcpCount(cpCount + 1);
+  let decrementCP = () => setcpCount(cpCount - 1);
+
+  
 
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
@@ -80,6 +99,25 @@ export default function Warhammer() {
 
     <Box sx={{ flexGrow: 1 }}>
       <Typography sx={{ p: 2.0 }} variant="h2"> 40k Objectives</Typography>
+      
+
+      <div> 
+      <ButtonIncrement onClickFunc={incrementRound}/>
+      <Display message={roundCount}/> 
+      <ButtonDecrement onClickFunc={decrementRound}/>
+      </div>
+      <div> 
+      <VPIncrement onClickFunc={incrementVP}/>
+      <Display message={vpCount}/> 
+      <VPDecrement onClickFunc={decrementVP}/>
+      </div>
+      <div> 
+      <CPIncrement onClickFunc={incrementCP}/>
+      <Display message={cpCount}/> 
+      <CPDecrement onClickFunc={decrementCP}/>
+      </div>
+
+    
       <Grid container spacing={2} style={{ display: "flex", justifyContent: "flex-start"}}>
 
         <Grid item xs={12} sm={10} md={10} sx={{ m: 'auto' }}>
