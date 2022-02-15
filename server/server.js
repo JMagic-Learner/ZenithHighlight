@@ -34,7 +34,7 @@ app.get('*', (req, res) => {
 });
 
 
-db.Objectives.find().sort( { category: -1 } );
+// db.Objectives.find().sort( { category: -1 } );
 
 db.once('open', () => {
   app.listen(PORT, () => {
