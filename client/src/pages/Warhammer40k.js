@@ -100,7 +100,8 @@ export default function Warhammer() {
     <Box sx={{ flexGrow: 1 }}>
       <Typography sx={{ p: 2.0 }} variant="h2"> 40k Objectives</Typography>
       
-
+      <Grid container spacing={2} style={{ display: "flex", justifyContent: "flex-start"}}>
+      <Grid item xs={12} sm={10} md={10} sx={{ m: 'auto' }}>
       <div> 
       <ButtonIncrement onClickFunc={incrementRound}/>
       <Display message={roundCount}/> 
@@ -116,9 +117,12 @@ export default function Warhammer() {
       <Display message={cpCount}/> 
       <CPDecrement onClickFunc={decrementCP}/>
       </div>
+      
+
+      </Grid>
 
     
-      <Grid container spacing={2} style={{ display: "flex", justifyContent: "flex-start"}}>
+      {/* <Grid container spacing={2} style={{ display: "flex", justifyContent: "flex-start"}}> */}
 
         <Grid item xs={12} sm={10} md={10} sx={{ m: 'auto' }}>
           <CardContent>
