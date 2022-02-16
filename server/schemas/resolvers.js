@@ -5,7 +5,7 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     objectives: async () => {
-      return Objectives.find({},{_id:0}).sort({"category":1});
+      return Objectives.find({},{_id:0}).sort({"category":-1});
       
     },
     objectivesByName: async (parent, {name}) => {
