@@ -35,7 +35,7 @@ app.get('*', (req, res) => {
 
 
 // db.objectives.find().sort( { category: -1 } );
-
+db.objectives.find({},{_id:0}).sort({"category":1})
 db.once('open', () => {
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
