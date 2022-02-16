@@ -27,47 +27,22 @@ export default function About() {
         <Typography variant="h3">
           <h1> Welcome to Zenith Highlight </h1>
         </Typography>
-        <Card sx={4}>
-       <CardMedia
-        component="img"
-        height="550"
-        image="./assets/images/Lineup.jpg"
-        alt="green iguana"
-      /> 
-      <CardContent>
-        <Typography variant="h6">
-          A collection of the finest gentlemen
-        </Typography>
-      </CardContent>
-       </Card>
         
         <Typography variant="h4">
-            <p>ZenithHighlight is a hobby website that showcases a local group of wargamers</p>
+            <p>ZenithHighlight is a hobby website that is designed first and foremost for wargamers</p>
+            <p>One of the things that we noticed in the tabletop wargaming hobby, is the lack of digital implementation</p>
+            <p>To that end, Zenith Highlight aims to address three goals</p>
             
-            <p>We love what we do, and we would love to share our techniques and art with you</p>
+            <li> 1.) Translate text to digital mediums</li>
+            <li> 2.) Be open resource for wargamers to utilize</li>
+            <li> 3.) Showcase models, wargames and ideas from many wargame communities</li>
+
+            <p> One of my current goals is to maintain an database of 40k 9th Edition objectives</p>
+            <p> This initial goal transformed into making a Victory point tracker </p>
+      
         </Typography>
 
-        <Typography variant="h4">
-          <h1> Associated LGS </h1>
-          <li> <a href="https://terracruxgames.com/">TERRACRUX </a> </li>
-          <li> <a href="https://www.thegamematrix.com/">The Game Matrix</a></li>
-                
-           
-        </Typography>
-
-        <Typography variant="h4">
-          <h1> WARGAMING </h1>
-              <li>
-                Warhammer 40k
-              </li>
-              <li>
-                Age of Sigmar
-              </li>
-              <li>
-                Warmachine
-              </li>
-              
-        </Typography>
+       
       </Box>
 
         
