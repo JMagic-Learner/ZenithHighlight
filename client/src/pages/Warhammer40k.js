@@ -50,8 +50,8 @@ export default function Warhammer() {
   const [roundCount, setroundCount] = React.useState(1);
   const [vpCount, setvpCount] = React.useState(0);
   const [cpCount, setcpCount] = React.useState(12);
-  const incrementRound = () => setroundCount(roundCount + 1);
-  let decrementRound = () => setroundCount(roundCount - 1);
+  const incrementRound = () => setroundCount(roundCount + 1, cpCount + 1);
+  let decrementRound = () => setroundCount(roundCount - 1, cpCount -1);
   const incrementVP = () => setvpCount(vpCount + 1);
   let decrementVP = () => setvpCount(vpCount - 1);
   const incrementCP = () => setcpCount(cpCount + 1);
