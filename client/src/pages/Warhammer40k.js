@@ -50,13 +50,18 @@ export default function Warhammer() {
   const [roundCount, setroundCount] = React.useState(1);
   const [vpCount, setvpCount] = React.useState(0);
   const [cpCount, setcpCount] = React.useState(12);
-  const incrementRound = () => setroundCount(roundCount + 1, cpCount + 1);
-  let decrementRound = () => setroundCount(roundCount - 1, cpCount -1);
+  const incrementRound = () => setroundCount(roundCount + 1);
+  let decrementRound = () => setroundCount(roundCount - 1);
   const incrementVP = () => setvpCount(vpCount + 1);
   let decrementVP = () => setvpCount(vpCount - 1);
   const incrementCP = () => setcpCount(cpCount + 1);
   let decrementCP = () => setcpCount(cpCount - 1);
 
+
+  const cascade = async (event) => {
+    incrementRound();
+    incrementCP();
+  }
   
 
   const handleChange1 = async (event) => {
@@ -103,7 +108,7 @@ export default function Warhammer() {
       <Grid container spacing={2} style={{ display: "flex", justifyContent: "flex-start"}}>
       <Grid item xs={12} sm={10} md={10} sx={{ m: 'auto' }}>
       <div> 
-      <ButtonIncrement onClickFunc={incrementRound}/>
+      <ButtonIncrement onClickFunc={cascade}/>
       <Display message={roundCount}/> 
       <ButtonDecrement onClickFunc={decrementRound}/>
       </div>
