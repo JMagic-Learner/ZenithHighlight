@@ -58,9 +58,14 @@ export default function Warhammer() {
   let decrementCP = () => setcpCount(cpCount - 1);
 
 
-  const cascade = async (event) => {
+  const cascadePlus = async (event) => {
     incrementRound();
     incrementCP();
+  }
+
+  const cascadeMinus = async (event) => {
+    decrementRound();
+    decrementCP();
   }
   
 
@@ -108,9 +113,9 @@ export default function Warhammer() {
       <Grid container spacing={2} style={{ display: "flex", justifyContent: "flex-start"}}>
       <Grid item xs={12} sm={10} md={10} sx={{ m: 'auto' }}>
       <div> 
-      <ButtonIncrement onClickFunc={cascade}/>
+      <ButtonIncrement onClickFunc={cascadePlus}/>
       <Display message={roundCount}/> 
-      <ButtonDecrement onClickFunc={decrementRound}/>
+      <ButtonDecrement onClickFunc={cascadeMinus}/>
       </div>
       <div> 
       <VPIncrement onClickFunc={incrementVP}/>
