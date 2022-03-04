@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 
 
-export default function MediaCardKDM() {
+export default function MediaCardContact() {
   return (
     <Card sx={4}>
        <CardMedia
@@ -22,15 +22,15 @@ export default function MediaCardKDM() {
      
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Kingdom Death: Monster
+          CONTACT US
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          A dark world with visually stunning models.
+          EMAIL * GITHUB * LINKEDIN 
         </Typography>
       </CardContent>
       <CardActions>
       <Button size="small" sx={{ mx: "auto" }} >
-      <Link margin="auto" to="/Kingdom"> Learn More</Link>
+      <Link margin="auto" to="/Contact"> Learn More</Link>
        </Button>
       </CardActions>
     </Card>

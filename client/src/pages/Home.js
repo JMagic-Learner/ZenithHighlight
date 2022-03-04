@@ -4,11 +4,12 @@ import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
 import MediaCard from '../components/MediaCard';
 import MediaCardWarhammer from '../components/MediaCardWarhammer';
-import MediaCardKDM from '../components/MediaCardKDM';
+import MediaCardKDM from '../components/MediaCardContact';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import MediaCardContact from '../components/MediaCardContact';
 
 // import Carousel1 from '../components/Carousel';
 
@@ -54,7 +55,7 @@ export default function Home() {
           <MediaCardWarhammer/>
           </Grid>
           <Grid item xs={4}>
-          <MediaCardKDM/>
+          <MediaCardContact/>
           </Grid>
         </Grid>
 
