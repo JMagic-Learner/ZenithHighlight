@@ -79,9 +79,10 @@ const Header = () => {
           <ListItem>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Publish">Publish</Button>
           </ListItem>
-          <ListItem>
+          {/* Removing Calendar, we need to narrow our focus */}
+          {/* <ListItem>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Calendar">Calendar</Button>
-          </ListItem>
+          </ListItem> */}
          
       </List>
       <Divider />

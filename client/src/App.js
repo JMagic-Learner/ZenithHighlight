@@ -15,7 +15,8 @@ import Header from './components/Header'
 import Home from './pages/Home';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
-import Calendar from './pages/Calendar';
+// Removing Calendar, we need to narrow our focus
+// import Calendar from './pages/Calendar';
 import Infinity from './pages/Infinity';
 import Publish from './pages/Publish';
 import Warhammer from './pages/Warhammer40k';
@@ -126,9 +127,9 @@ function App() {
             <Route exact path="/Publish">
               <Publish />
             </Route>
-            <Route exact path="/Calendar">
+            {/* <Route exact path="/Calendar">
               <Calendar />
-            </Route>
+            </Route> */}
           </Switch>
         </div>
     </div>
