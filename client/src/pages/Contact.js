@@ -82,7 +82,8 @@ export default function Contact() {
       </CardContent>
       <CardActions>
       <Button size="small" sx={{ mx: "auto" }} >
-      <Link margin="auto" to="https://www.linkedin.com/in/jason-ma-970417113"> Learn More</Link>
+      <a href="https://www.linkedin.com/in/jason-ma-970417113" target="_blank" margin="auto" >Link in new tab</a>
+      
        </Button>
       </CardActions>
     </Card>
