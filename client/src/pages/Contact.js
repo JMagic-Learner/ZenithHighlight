@@ -43,16 +43,16 @@ export default function Contact() {
        <CardMedia
         component="img"
         height="400"
-        image="./assets/images/DaofeiExample.jpeg"
+        image="./assets/images/Github.jpeg"
         alt="green iguana"
       /> 
       {/* <Image src="./assets/images/AssaultIntercessor.jpg" /> */}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Infinity
+          Github
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          A Sci-Fi universe that incorporates cyberpunk , anime , and skirmish gameplay
+          Coding Repository for JMAGIC-LEARNER
         </Typography>
       </CardContent>
       <CardActions>
@@ -68,21 +68,21 @@ export default function Contact() {
        <CardMedia
         component="img"
         height="400"
-        image="./assets/images/DaofeiExample.jpeg"
+        image="./assets/images/Linkedin.jpeg"
         alt="green iguana"
       /> 
       {/* <Image src="./assets/images/AssaultIntercessor.jpg" /> */}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Infinity
+          LinkedIn
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          A Sci-Fi universe that incorporates cyberpunk , anime , and skirmish gameplay
+          Connect with me on LinkedIn!
         </Typography>
       </CardContent>
       <CardActions>
       <Button size="small" sx={{ mx: "auto" }} >
-      <Link margin="auto" to="/Infinity"> Learn More</Link>
+      <Link margin="auto" to="https://www.linkedin.com/in/jason-ma-970417113"> Learn More</Link>
        </Button>
       </CardActions>
     </Card>
