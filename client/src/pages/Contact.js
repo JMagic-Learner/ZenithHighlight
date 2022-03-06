@@ -7,6 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
 import { ThemeProvider } from '@emotion/react';
 import { createTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
@@ -36,7 +37,7 @@ export default function Contact() {
         
           <Typography sx={{ p: 2.0 }} variant="h2"> Contact</Typography>
     <Grid container spacing={2}> 
-    
+
     <Grid item xs={4}>         
     <Card sx={4}>
        <CardMedia
