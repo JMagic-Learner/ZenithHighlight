@@ -35,21 +35,6 @@ export default function Contact() {
         <Box sx={{ flexGrow: 1 }}>
         
           <Typography sx={{ p: 2.0 }} variant="h2"> Contact</Typography>
-          
-        <Card>
-        <CardMedia
-                component="img"
-                height="550"
-                image="./assets/images/Fgo x Infinity.jpg"
-                alt="LIST"
-              /> 
-              <CardContent>
-                <Typography variant="h6">
-                 
-                </Typography>
-              </CardContent>
-               </Card>
-
                
     <Card sx={4}>
        <CardMedia
