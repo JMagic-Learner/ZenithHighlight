@@ -35,7 +35,9 @@ export default function Contact() {
         <Box sx={{ flexGrow: 1 }}>
         
           <Typography sx={{ p: 2.0 }} variant="h2"> Contact</Typography>
-               
+    <Grid container spacing={2}> 
+    
+    <Grid item xs={4}>         
     <Card sx={4}>
        <CardMedia
         component="img"
@@ -58,7 +60,9 @@ export default function Contact() {
        </Button>
       </CardActions>
     </Card>
+    </Grid>
 
+    <Grid item xs={4}>         
     <Card sx={4}>
        <CardMedia
         component="img"
@@ -81,7 +85,9 @@ export default function Contact() {
        </Button>
       </CardActions>
     </Card>
+    </Grid>
 
+    <Grid item xs={4}>         
     <Card sx={4}>
        <CardMedia
         component="img"
@@ -104,8 +110,9 @@ export default function Contact() {
        </Button>
       </CardActions>
     </Card>
+    </Grid>
   
-        
+        </Grid>
         </Box>
         </ThemeProvider>
     )
