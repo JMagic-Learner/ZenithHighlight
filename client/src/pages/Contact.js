@@ -9,6 +9,7 @@ import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 import { ThemeProvider } from '@emotion/react';
 import { createTheme } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 
 const theme = createTheme({
   palette: {
