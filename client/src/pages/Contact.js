@@ -43,7 +43,7 @@ export default function Contact() {
        <CardMedia
         component="img"
         height="400"
-        image="./assets/images/Github.jpeg"
+        image="./assets/images/Github.jpg"
         alt="green iguana"
       /> 
       {/* <Image src="./assets/images/AssaultIntercessor.jpg" /> */}
@@ -68,7 +68,7 @@ export default function Contact() {
        <CardMedia
         component="img"
         height="400"
-        image="./assets/images/Linkedin.jpeg"
+        image="./assets/images/Linkedin.jpg"
         alt="green iguana"
       /> 
       {/* <Image src="./assets/images/AssaultIntercessor.jpg" /> */}
