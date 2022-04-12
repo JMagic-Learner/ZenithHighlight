@@ -20,16 +20,14 @@ export default function Home() {
     return(
         
         <Box sx={{ flexGrow: 1 }}>
+<Grid container spacing={2}> 
+      <Grid item sx={8} md={12} lg={12} >
 
-
-       
-      {/* <Carousel1 /> */}
-     
-     
+      {/* <Carousel1 /> */}     
 <Card>
 <CardMedia
         component="img"
-        height="550"
+        height sx={8} md={12} lg={12}
         image="./assets/images/ZenithHighlightTemplate.jpg"
         alt="green iguana"
       /> 
@@ -58,7 +56,8 @@ export default function Home() {
           <MediaCardContact/>
           </Grid>
         </Grid>
-
+</Grid>
+</Grid>
       </Box>
 
         

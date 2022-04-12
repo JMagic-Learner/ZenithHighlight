@@ -30,6 +30,12 @@ if (process.env.NODE_ENV === 'production') {
 
 
 app.get('*', (req, res) => {
+  if (req) {
+    console.log("A request has been sent");
+  }
+  if (res) {
+    console.log("A response has been generated");
+  }
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 

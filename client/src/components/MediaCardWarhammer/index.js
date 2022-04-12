@@ -24,7 +24,7 @@ export default function MediaCardWarhammer() {
       {/* <Image src="./assets/images/AssaultIntercessor.jpg" /> */}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-         Warhammer 40k - Objective / Victory Point Tracker
+         Warhammer 40k - 9th Edition Tracker
         </Typography>
         <Typography variant="body2" color="text.secondary">
          Use this utility to track your objectives and victory points.

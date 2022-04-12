@@ -94,14 +94,14 @@ export default function Gallery() {
           <h1> Gallery </h1>
         </Typography>
 <Grid container spacing={2}> 
-<Grid item xs={8} md={4}>
+<Grid item xs={4} md={4}>
        
 
        
 
         <ImageList
   
-  sx={{ width: '325%', height: 2900 }}
+  sx={{ width: '325%', height: '100%' }}
   variant="quilted"
   cols={4}
   rowHeight={484}
