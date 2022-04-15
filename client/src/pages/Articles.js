@@ -44,11 +44,11 @@ export default function Articles() {
                 console.log("The title is: " + element.articleTitle);
               }
               return(
-                <Item xs={12} sm={6} md={6} lg={8}> 
-                <Typography align="center"> {element.createdAt} </Typography>
-                <Typography align="center"> {element.articleTitle} </Typography>
+                <Item> 
+                <Typography > {element.createdAt} </Typography>
+                <Typography > {element.articleTitle} </Typography>
                 <Link to={`/Article1/${element._id}`} >
-                <Typography variant="h6" align="justify" margin="5" > {element.articleTitle}</Typography>
+                <Typography variant="h6" > {element.articleTitle}</Typography>
                 </Link>
                 </Item>
               );

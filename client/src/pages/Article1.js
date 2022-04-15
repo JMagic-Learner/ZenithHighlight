@@ -56,6 +56,8 @@ const Article1 = () => {
     return(
      
           <Box sx={{ flexGrow: 1 }}>
+            <Grid>
+              <Grid item xs={12} sm={6} md={8}>
             <Typography variant="h4"> {articleData.articleTitle} </Typography>
 
             <Divider sx={{ p: 5.0 }}>  AUTHOR - {articleData.articleAuthor} </Divider>
@@ -69,7 +71,8 @@ const Article1 = () => {
               {articleData.articleText2}
               
             </Typography>
-            
+            </Grid>
+            </Grid>
           </Box>
            
         );
