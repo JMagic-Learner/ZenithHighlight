@@ -44,7 +44,7 @@ export default function Articles() {
                 console.log("The title is: " + element.articleTitle);
               }
               return(
-                <Item>
+                <Item xs={12} sm={6} md={8}> 
                 <Typography> {element.createdAt} </Typography>
                 <Typography> {element.articleTitle} </Typography>
                 <Link to={`/Article1/${element._id}`} >
