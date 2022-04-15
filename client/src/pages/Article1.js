@@ -57,7 +57,7 @@ const Article1 = () => {
      
           <Box sx={{ flexGrow: 1 }}>
             <Grid>
-              <Grid item xs={12} sm={6} md={8} align="center">
+              <Grid item xs={12} sm={6} md={8} align="center" margin="auto">
             <Typography variant="h4"> {articleData.articleTitle} </Typography>
 
             <Divider sx={{ p: 5.0 }}>  AUTHOR - {articleData.articleAuthor} </Divider>
