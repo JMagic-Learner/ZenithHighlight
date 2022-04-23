@@ -68,7 +68,7 @@ let scrollBack =async (event) => {
         <Card sx={4}>
        <CardMedia
         component="img"
-        height="400"
+        height="500"
         image={pictureState}
         alt="a list of pictures"
       /> 
