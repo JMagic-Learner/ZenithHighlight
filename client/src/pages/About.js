@@ -6,6 +6,11 @@ import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
 import { useState } from 'react';
 
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@emotion/react';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+
 //Image Components
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -13,7 +18,22 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Button } from 'react-bootstrap';
 
-
+const buttonStyle = createTheme({
+  palette: {
+    primary: {
+      light: '#fafafa',
+      main: '#ffb300',
+      dark: '#fafafa',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#ff7961',
+      main: '#f44336',
+      dark: '#ba000d',
+      contrastText: '#000',
+    },
+  },
+});
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -57,25 +77,30 @@ let scrollBack =async (event) => {
     return(
         
         <Box sx={{ flexGrow: 1 }}>
-       <Grid container spacing={2} >
-        <Typography variant="h3">
-          <h1> Welcome to Zenith Highlight </h1>
+       <Grid container spacing={2} align="center" >
+       <Grid item sx={8} md={12} lg={12}>
+        <Typography variant="h3" align='center'>
+           Welcome to Zenith Highlight 
         </Typography>
-
-        <Grid item sx={8} md={12} lg={12}>
-        <Button variant="contained" align="center" onClick={scrollForward}> Scroll Through Forwards</Button>
-        <Button variant="contained" onClick={scrollBack}> Scroll Through BAckwards </Button>
-        <Card sx={4}>
+        </Grid>
+        <Grid item sx={12} md={12} lg={12}>
+ 
+        
+        <Card  >
        <CardMedia
         component="img"
-        height="500"
+        height="600"
         image={pictureState}
         alt="a list of pictures"
       /> 
     </Card>
+    < ArrowBackIosIcon variant="contained" onClick={scrollForward} sx={{ fontSize: 50 }}   > Scroll Through Forwards</ArrowBackIosIcon>
+    < ArrowForwardIosIcon variant="contained" onClick={scrollBack} sx={{ fontSize: 50 }} > Scroll Through BAckwards </ ArrowForwardIosIcon>
+
         </Grid>
-        <Grid item>
-        <Typography variant="h8" align="justify">
+       
+        <Grid item sx={12} md={12} lg={12}>
+        <Typography variant="h8" align="center">
             <p>ZenithHighlight is a hobby website that is designed first and foremost for wargamers</p>
             <p>One of the things that we noticed in the tabletop wargaming hobby, is the lack of digital implementation</p>
             <p>To that end, Zenith Highlight aims to address three goals</p>
