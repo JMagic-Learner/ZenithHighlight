@@ -28,7 +28,7 @@ export default function Home() {
 <CardMedia
         component="img"
         height sx={8} md={12} lg={12}
-        image="./assets/images/ZenithHighlightTemplate.jpg"
+        image="./assets/images/ZenithHighlightTemplate2.jpg"
         alt="green iguana"
       /> 
       
