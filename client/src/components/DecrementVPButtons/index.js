@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 export default function VPDecrement(props) {
   
     return (
-        <Button variant="contained" onClick={props.onClickFunc} >Victory Points (-) </Button> 
+        <Button variant="contained" onClick={props.onClickFunc} > VP (-) </Button> 
      
     )
   }
