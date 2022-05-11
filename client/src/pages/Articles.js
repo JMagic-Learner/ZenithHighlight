@@ -45,7 +45,7 @@ export default function Articles() {
                 console.log("The title is: " + element.articleTitle);
               }
               return(
-                <Divider>
+                
                 <Item> 
                 <Typography > {element.createdAt} </Typography>
                 <Typography > {element.articleTitle} </Typography>
@@ -53,7 +53,7 @@ export default function Articles() {
                 <Typography variant="h6" > {element.articleTitle}</Typography>
                 </Link>
                 </Item>
-                </Divider>
+               
               );
                   })
                 }
