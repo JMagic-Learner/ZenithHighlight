@@ -44,7 +44,11 @@ const Item = styled(Paper)(({ theme }) => ({
 
   let picturePosition = 0;
   let pictureArray = [
-    '../assets/images/BloodAngelsLineup.jpg', '../assets/images/AssaultIntercessor.jpg', '../assets/images/yujing.jpg', '../assets/images/TifaExpo.jpeg', "../assets/images/ParadeMortisContemptor2.jpg"
+    '../assets/images/BloodAngelsLineup.jpg', 
+    '../assets/images/AssaultIntercessor.jpg', 
+    '../assets/images/yujing.jpg', 
+    '../assets/images/TifaExpo.jpeg', 
+    "../assets/images/ParadeMortisContemptor2.jpg"
     ];
 
 export default function About() {
