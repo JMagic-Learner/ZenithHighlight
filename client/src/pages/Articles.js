@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
+import { Divider } from '@mui/material';
 
 import { useQuery } from '@apollo/client';
 import { QUERY_ARTICLES } from '../utils/queries';
@@ -44,6 +45,7 @@ export default function Articles() {
                 console.log("The title is: " + element.articleTitle);
               }
               return(
+                <Divider>
                 <Item> 
                 <Typography > {element.createdAt} </Typography>
                 <Typography > {element.articleTitle} </Typography>
@@ -51,6 +53,7 @@ export default function Articles() {
                 <Typography variant="h6" > {element.articleTitle}</Typography>
                 </Link>
                 </Item>
+                </Divider>
               );
                   })
                 }
