@@ -69,11 +69,11 @@ const itemData = [
     title: 'Jujak',
   },
   {
-    img: '../assets/images/Leviathan.jpg',
+    img: '../assets/images/Leviathan.JPG',
     title: 'Sea star',
   },
   {
-    img: '../assets/images/ChapterCommand1.jpg',
+    img: '../assets/images/ChapterCommand1.JPG',
     title: 'Bike',
     cols: 2,
   },
