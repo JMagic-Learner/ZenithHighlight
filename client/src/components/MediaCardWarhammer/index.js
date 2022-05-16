@@ -27,7 +27,7 @@ export default function MediaCardWarhammer() {
          Warhammer 40k - 9th Edition Tracker
         </Typography>
         <Typography variant="body2" color="text.secondary">
-         Use this utility to track your objectives and victory points.
+         Objective Tracker and Scoring Utility.
         </Typography>
       </CardContent>
       <CardActions>
