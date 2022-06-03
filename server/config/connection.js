@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-'mongodb://localhost/27017' ||  process.env.MONGODB_URI ,
+'mongodb://localhost/zenithhighlight' ||  process.env.MONGODB_URI ,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
