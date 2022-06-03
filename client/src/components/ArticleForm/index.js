@@ -115,7 +115,6 @@ const ArticleForm = () => {
                 placeholder="Title"
                 value={articleTitle}
                 className="form-input w-500"
-                style={{ height: "75%", width: "75%" ,lineHeight: '1', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
             </div>
@@ -133,10 +132,9 @@ const ArticleForm = () => {
             <div>
               <textarea
                 name="articleText2"
-                placeholder="Write the second/ concluding paragraph"
+                placeholder="Write the second/ conclusion"
                 value={articleText2}
-                className="form-input w-500 concluding"
-                style={{ height: "75%", width: "75%" ,lineHeight: '1', resize: 'vertical' }}
+                className="form-input w-500 conclusion"
                 onChange={handleChange}
               ></textarea>
             </div>

@@ -10,10 +10,9 @@ import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
 import { Typography } from '@mui/material';
 
-const author = "Testing"
-const title = "Load this Title from MongoDB"
-const paragraph1 = "This is the first paragraph loaded from MongoDB"
-const paragraph2 = "This is the second paragraph loaded from MongoDB"
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -25,6 +24,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const Article1 = () => {
   // We first capture the parameter being fed from Articles.js 
   const { articleId } = useParams();
+  let idContainer = ""
   const [renderComment, commentState] = useState('false');
 
   const { loading, data } = useQuery(QUERY_SINGLE_ARTICLE, {
@@ -41,6 +41,7 @@ const Article1 = () => {
   }
   if (articleData._id) {
     console.log("QUERY_SINGLE_ARTICLE has found " + articleData._id + " as the value of _id");
+    idContainer = articleData._id;
   }
   if (articleData.articleTitle) {
     console.log("QUERY_SINGLE_ARTICLE has found " + articleData.articleTitle + " as the value of title");
@@ -58,9 +59,25 @@ const Article1 = () => {
           <Box sx={{ flexGrow: 1 }}>
             <Grid>
               <Grid item xs={12} sm={6} md={8} align="center" margin="auto">
+
+              <Card>
+        <CardMedia
+                component="img"
+                height="550"
+                image={"./assets/images/"+idContainer+".jpg"}
+                alt="LIST"
+              /> 
+              <CardContent>
+                <Typography variant="h6">
+                {articleData.articleTitle}
+                </Typography>
+              </CardContent>
+               </Card>
+            
             <Typography variant="h4"> {articleData.articleTitle} </Typography>
 
             <Divider sx={{ p: 5.0 }}>  AUTHOR - {articleData.articleAuthor} </Divider>
+
 
             <Typography >
 

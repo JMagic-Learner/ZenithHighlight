@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-.introductory {
+.introductory , .conclusion{
   height:300px;
   width:75%;
   line-height: "1";
