@@ -126,7 +126,6 @@ const ArticleForm = () => {
                 placeholder="Write the first / introductory paragraph"
                 value={articleText1}
                 className="form-input w-500 introductory"
-                style={{ height: "75%", width: "75%" ,lineHeight: '1', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
             </div>
