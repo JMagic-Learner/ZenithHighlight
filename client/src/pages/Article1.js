@@ -42,6 +42,7 @@ const Article1 = () => {
   if (articleData._id) {
     console.log("QUERY_SINGLE_ARTICLE has found " + articleData._id + " as the value of _id");
     idContainer = articleData._id;
+    console.log(typeof idContainer, idContainer);
   }
   if (articleData.articleTitle) {
     console.log("QUERY_SINGLE_ARTICLE has found " + articleData.articleTitle + " as the value of title");
@@ -64,7 +65,7 @@ const Article1 = () => {
         <CardMedia
                 component="img"
                 height="550"
-                image={"./assets/images/"+idContainer+".JPG"}
+                image={"./assets/images/61baee592c95d4001604f4b9.JPG"}
                 alt="IMAGE"
               /> 
               <CardContent>
