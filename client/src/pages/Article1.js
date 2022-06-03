@@ -65,7 +65,7 @@ const Article1 = () => {
         <CardMedia
                 component="img"
                 height="550"
-                image={"../assets/images/" + idContainer + ".jpg"}
+                image={"../assets/images/" + idContainer + ".JPG"}
                 alt="IMAGE"
               /> 
               <CardContent>
