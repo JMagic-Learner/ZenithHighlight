@@ -24,6 +24,8 @@ const typeDefs = gql`
     articleAuthor: String
     articleText1: String
     articleText2: String
+    articleText3: String
+    articleText4: String
     articleTitle: String
     createdAt: String
   }
