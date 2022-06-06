@@ -87,6 +87,16 @@ const Article1 = () => {
               <Divider sx={{ p: 2.0 }}>  </Divider>
 
               {articleData.articleText2}
+
+              <Divider sx={{ p: 2.0 }}>  </Divider>
+
+              {articleData.articleText3}
+
+              <Divider sx={{ p: 2.0 }}>  </Divider>
+
+              {articleData.articleText4}
+
+              
               
             </Typography>
             </Grid>

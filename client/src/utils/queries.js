@@ -62,6 +62,8 @@ export const QUERY_ARTICLES = gql`
       _id
       articleText1
       articleText2
+      articleText3
+      articleText4
       articleAuthor
       articleTitle
       createdAt
@@ -76,6 +78,8 @@ export const QUERY_SINGLE_ARTICLE = gql`
       _id
       articleText1
       articleText2
+      articleText3
+      articleText4
       articleAuthor
       articleTitle
       createdAt
@@ -91,8 +95,10 @@ export const QUERY_ME = gql`
       email
       articles{
         _id
-      articleText1
-      articleText2
+        articleText1
+        articleText2
+        articleText3
+        articleText4
       articleAuthor
       articleTitle
       createdAt

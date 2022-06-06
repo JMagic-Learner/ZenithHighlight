@@ -18,6 +18,8 @@ const ArticleForm = () => {
   const [articleTitle, setArticleTitle] = useState('');
   const [articleText1, setArticleText1] = useState('');
   const [articleText2, setArticleText2] = useState('');
+  const [articleText3, setArticleText3] = useState('');
+  const [articleText4, setArticleText4] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
 
   // We are going to ping REACT, mutation to add an Article.
@@ -56,6 +58,8 @@ const ArticleForm = () => {
          variables: {
            articleText1,
            articleText2,
+           articleText3,
+           articleText4,
            articleAuthor: Auth.getProfile().data.username,
            articleTitle,
          },
@@ -63,6 +67,8 @@ const ArticleForm = () => {
        setArticleTitle('');
        setArticleText1('');
        setArticleText2('');
+       setArticleText3('');
+       setArticleText4('');
       } catch (err) {
         console.error(err);
       }
@@ -85,6 +91,16 @@ const ArticleForm = () => {
         setArticleText2(value);
         setCharacterCount(value.length);
     }
+
+    if (name === 'articleText3' && value.length <= 5000) {
+      setArticleText3(value);
+      setCharacterCount(value.length);
+  }
+
+  if (name === 'articleText4' && value.length <= 5000) {
+    setArticleText4(value);
+    setCharacterCount(value.length);
+}
    };
 
 
@@ -138,6 +154,27 @@ const ArticleForm = () => {
                 onChange={handleChange}
               ></textarea>
             </div>
+
+            <div>
+              <textarea
+                name="articleText3"
+                placeholder="Write the second/ conclusion"
+                value={articleText3}
+                className="form-input w-500 conclusion"
+                onChange={handleChange}
+              ></textarea>
+            </div>
+
+            <div>
+              <textarea
+                name="articleText3"
+                placeholder="Write the second/ conclusion"
+                value={articleText4}
+                className="form-input w-500 conclusion"
+                onChange={handleChange}
+              ></textarea>
+            </div>
+
 
             <div>
               <button className="btn btn-primary btn-block py-3" type="submit">

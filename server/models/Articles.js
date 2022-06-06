@@ -10,6 +10,14 @@ const articleSchema = new Schema({
     type: String,
     trim: true,
   },
+  articleText3: {
+    type: String,
+    trim: true,
+  },
+  articleText4: {
+    type: String,
+    trim: true,
+  },
   articleAuthor: {
     type: String,
     required: true,
