@@ -20,10 +20,12 @@ code {
 }
 
 .logo {
-  width:17.5%
+  width:120px
 }
 
 .banner {
   display:flex;
   width:80%;
+  margin:auto;
+
 }
