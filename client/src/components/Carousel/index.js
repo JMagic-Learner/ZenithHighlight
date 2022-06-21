@@ -17,7 +17,7 @@ const Carousel = () => {
     ];
 
 
-    const [pictureState, pictureDisplay] = useState("../assets/images/BloodAngelsLineup.jpg");
+    let [pictureState, pictureDisplay] = useState("../assets/images/BloodAngelsLineup.jpg");
 
     const scrollForward =async (event) => {
         if (picturePosition > pictureArray.length - 1) {
