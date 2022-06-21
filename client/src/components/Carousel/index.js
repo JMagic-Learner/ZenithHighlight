@@ -1,6 +1,9 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import Grid from '@mui/material/Grid';
 
 const Carousel = () => {
     let picturePosition = 0;
