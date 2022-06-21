@@ -5,17 +5,18 @@ import CardMedia from '@mui/material/CardMedia';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Grid from '@mui/material/Grid';
+let picturePosition = 0;
+let pictureArray = [
+    '../assets/images/BloodAngelsLineup.jpg',
+    '../assets/images/AssaultIntercessor.jpg',
+    '../assets/images/yujing.jpg',
+    '../assets/images/TifaExpo.jpeg',
+    "../assets/images/ParadeMortisContemptor2.jpg"
+];
 
 const Carousel = () => {
-    let picturePosition = 0;
-    let pictureArray = [
-        '../assets/images/BloodAngelsLineup.jpg',
-        '../assets/images/AssaultIntercessor.jpg',
-        '../assets/images/yujing.jpg',
-        '../assets/images/TifaExpo.jpeg',
-        "../assets/images/ParadeMortisContemptor2.jpg"
-    ];
-
+   
+   
 
     let [pictureState, pictureDisplay] = useState("../assets/images/BloodAngelsLineup.jpg");
 
