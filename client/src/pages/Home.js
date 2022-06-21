@@ -48,15 +48,24 @@ export default function Home() {
           <Grid container spacing={2}>
             <Grid item xs={4}>
               <MediaCard 
+                title="Infnity"
                 description="A Sci-Fi universe that incorporates cyberpunk , anime , and skirmish gameplay"
                 imageSource="./assets/images/DaofeiExample.jpeg"
                 linkAddress="/Infinity"/>
             </Grid>
             <Grid item xs={4}>
-              <MediaCardWarhammer />
+             <MediaCard
+                title="Warhammer40k"
+                description="Objective Tracker and Scoring Utility - Nachmund"
+                imageSource="./assets/images/AssaultIntercessor.jpg"
+                linkAddress="/Warhammer"/>
             </Grid>
             <Grid item xs={4}>
-              <MediaCardContact />
+            <MediaCard
+                title="Contact"
+                description=" Connect with me on LinkedIn/Reddit/Github"
+                imageSource="./assets/images/Github.jpg"
+                linkAddress="/Contact"/>
             </Grid>
           </Grid>
         </Grid>
