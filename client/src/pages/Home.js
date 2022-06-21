@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
 import MediaCard from '../components/MediaCard';
-
+import Carousel from '../components/Carousel';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -19,6 +19,8 @@ export default function Home() {
       <Grid container spacing={2}>
         <Grid item sx={8} md={12} lg={12} >
 
+          <Carousel/>
+
           <Card>
             <CardMedia
               component="img"
@@ -26,9 +28,6 @@ export default function Home() {
               image="./assets/images/ZenithHighlightTemplate2.jpg"
               alt="green iguana"
             />
-
-
-
             <CardContent>
               <Typography variant="h6">
                 Recent Works
