@@ -23,6 +23,7 @@ import Articles from './pages/Articles';
 import Article1 from './pages/Article1';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Logo from './assets/images/Zenith_Logo.jpg';
 
 
 import { createTheme } from '@mui/material/styles';
@@ -78,9 +79,12 @@ function App() {
     <ThemeProvider theme={theme}>
     <Router>
     <div className="App">
+      <div className="banner">
+        <img className="logo" src={Logo}/>
     <Typography variant="h2">
       ZENITH HIGHLIGHT
       </Typography>
+      </div>
     {/* <Card>
     <CardMedia
         component="img"

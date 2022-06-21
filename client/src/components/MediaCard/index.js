@@ -38,10 +38,9 @@ export default function MediaCard(props) {
         image={props.imageSource}
         alt="image is passed through props"
       /> 
-      {/* <Image src="./assets/images/AssaultIntercessor.jpg" /> */}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Infinity
+          {props.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {props.description}
