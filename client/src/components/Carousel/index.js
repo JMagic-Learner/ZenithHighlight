@@ -11,7 +11,8 @@ let pictureArray = [
     '../assets/images/AssaultIntercessor.jpg',
     '../assets/images/yujing.jpg',
     '../assets/images/TifaExpo.jpeg',
-    "../assets/images/ParadeMortisContemptor2.jpg"
+    "../assets/images/ParadeMortisContemptor2.jpg",
+    "../assets/images/ZenithHighlightTemplate2.jpg"
 ];
 
 const Carousel = () => {
