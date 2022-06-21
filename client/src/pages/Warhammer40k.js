@@ -95,19 +95,19 @@ export default function Warhammer() {
     {
       id:1,
       title: "Objective 1",
-      val: {objective1},
+      val: objective1,
       funct: handleChange1
      },
      {
      id:2,
      title: "Objective 2",
-     val: {objective2},
+     val: objective2,
      funct: handleChange2
      },
      {
       id:3,
       title: "Objective 3",
-      val: {objective3},
+      val: objective3,
       funct: handleChange3
      }
   ]
