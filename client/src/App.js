@@ -15,8 +15,6 @@ import Header from './components/Header'
 import Home from './pages/Home';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
-// Removing Calendar, we need to narrow our focus
-// import Calendar from './pages/Calendar';
 import Contact from './pages/Contact';
 import Infinity from './pages/Infinity';
 import Publish from './pages/Publish';

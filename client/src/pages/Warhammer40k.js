@@ -39,7 +39,9 @@ export default function Warhammer() {
   let objectivename2 = "";
   let objectivename3 = "";
 
-  const { loading, data } = useQuery(QUERY_OBJECTIVES);
+ 
+
+  const [ loading, data ] = useQuery(QUERY_OBJECTIVES);
   if (data) {
     console.log('We have succesfully queried objectives');
   }
@@ -68,7 +70,6 @@ export default function Warhammer() {
     decrementCP();
   }
   
-
   const handleChange1 = async (event) => {
     setObjective1(event.target.value);
     objectivename1 = event.target.value;
@@ -89,6 +90,27 @@ export default function Warhammer() {
     console.log(objectivename3);
     return objectivename3;
   };
+
+  let HTMLArray = [
+    {
+      id:1,
+      title: "Objective 1",
+      val: {objective1},
+      funct: handleChange1
+     },
+     {
+     id:2,
+     title: "Objective 2",
+     val: {objective2},
+     funct: handleChange2
+     },
+     {
+      id:3,
+      title: "Objective 3",
+      val: {objective3},
+      funct: handleChange3
+     }
+  ]
 
   // Load all Warhammer 40k 2020 Objectives into this array.
 
@@ -131,10 +153,49 @@ export default function Warhammer() {
 
       </Grid>
 
-    
-      {/* <Grid container spacing={2} style={{ display: "flex", justifyContent: "flex-start"}}> */}
+        {HTMLArray.map((HTMLtemplate) => {
+             <Grid item xs={12} sm={10} md={10} sx={{ m: 'auto' }}>
+             <CardContent>
+               <Item>
+                 <Typography> {HTMLtemplate.title} </Typography>
+                 <FormControl fullWidth>
+                   <InputLabel id="demo-simple-select-label">Select Objective 1</InputLabel>
+                   <Select
+                     labelId="demo-simple-select-label"
+                     id="demo-simple-select"
+                     value={HTMLtemplate.val}
+                     label={HTMLtemplate.title}
+                     onChange={HTMLtemplate.funct}
+   
+                   >
+                     {ObjectivesArray.map((element) => {
+                       if (element) {
+                         console.log("element has been detected")
+                       }
+                       return (
+                         <MenuItem value={element.name} >
+                           <CardContent>
+                             <Item style={{ whiteSpace: 'normal', wordBreak: "break-word"}}>
+                               <Typography> {element.category} </Typography>
+                               <Typography>Objective: {element.name} </Typography>
+                               <Typography>Priority: {element.priority} </Typography>
+                               <Typography>When to score: {element.priorityDescription} </Typography>
+                               <Typography>Description {element.description} </Typography>
+                             </Item>
+                           </CardContent>
+                         </MenuItem>
+                       );
+                     })}
+   
+                   </Select>
+                 </FormControl>
+   
+               </Item>
+             </CardContent>
+           </Grid>
+        })}
 
-        <Grid item xs={12} sm={10} md={10} sx={{ m: 'auto' }}>
+        {/* <Grid item xs={12} sm={10} md={10} sx={{ m: 'auto' }}>
           <CardContent>
             <Item>
               <Typography> Objective 1 </Typography>
@@ -252,7 +313,7 @@ export default function Warhammer() {
               </FormControl>
             </Item>
           </CardContent>
-        </Grid>
+        </Grid> */}
 
 
         <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
