@@ -41,7 +41,7 @@ export default function Warhammer() {
 
  
 
-  const [ loading, data ] = useQuery(QUERY_OBJECTIVES);
+  const  {loading, data } = useQuery(QUERY_OBJECTIVES);
   if (data) {
     console.log('We have succesfully queried objectives');
   }
@@ -153,7 +153,8 @@ export default function Warhammer() {
 
       </Grid>
 
-        {HTMLArray.map((HTMLtemplate) => {
+        {HTMLArray.forEach((HTMLtemplate) => {
+          return(
              <Grid item xs={12} sm={10} md={10} sx={{ m: 'auto' }}>
              <CardContent>
                <Item>
@@ -193,7 +194,7 @@ export default function Warhammer() {
                </Item>
              </CardContent>
            </Grid>
-        })}
+        )})}
 
         {/* <Grid item xs={12} sm={10} md={10} sx={{ m: 'auto' }}>
           <CardContent>

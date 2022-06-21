@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 
 
-export default function MediaCardWarhammer() {
+export default function MediaCardWarhammer(props) {
   return (
     
     <Card sx={4}>

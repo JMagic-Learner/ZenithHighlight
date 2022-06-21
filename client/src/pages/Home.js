@@ -17,50 +17,53 @@ import MediaCardContact from '../components/MediaCardContact';
 
 
 export default function Home() {
-    return(
-        
-        <Box sx={{ flexGrow: 1 }}>
-<Grid container spacing={2}> 
-      <Grid item sx={8} md={12} lg={12} >
+  return (
 
-      {/* <Carousel1 /> */}     
-<Card>
-<CardMedia
-        component="img"
-        height sx={8} md={12} lg={12}
-        image="./assets/images/ZenithHighlightTemplate2.jpg"
-        alt="green iguana"
-      /> 
-      
-      
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2}>
+        <Grid item sx={8} md={12} lg={12} >
 
-      <CardContent>
-        <Typography variant="h6">
-          Recent Works
-        </Typography>
-      </CardContent>
-       </Card>
+          {/* <Carousel1 /> */}
+          <Card>
+            <CardMedia
+              component="img"
+              height sx={8} md={12} lg={12}
+              image="./assets/images/ZenithHighlightTemplate2.jpg"
+              alt="green iguana"
+            />
 
-       <Typography variant="h4">
+
+
+            <CardContent>
+              <Typography variant="h6">
+                Recent Works
+              </Typography>
+            </CardContent>
+          </Card>
+
+          <Typography variant="h4">
             <p> Hello, this is a collection of miniatures from artists local to your area</p>
-        </Typography>
-          
-        <Grid container spacing={2}>
-          <Grid item xs={4}>
-          <MediaCard/>
-          </Grid>
-          <Grid item xs={4}>
-          <MediaCardWarhammer/>
-          </Grid>
-          <Grid item xs={4}>
-          <MediaCardContact/>
+          </Typography>
+
+          <Grid container spacing={2}>
+            <Grid item xs={4}>
+              <MediaCard 
+                description="A Sci-Fi universe that incorporates cyberpunk , anime , and skirmish gameplay"
+                imageSource="./assets/images/DaofeiExample.jpeg"
+                linkAddress="/Infinity"/>
+            </Grid>
+            <Grid item xs={4}>
+              <MediaCardWarhammer />
+            </Grid>
+            <Grid item xs={4}>
+              <MediaCardContact />
+            </Grid>
           </Grid>
         </Grid>
-</Grid>
-</Grid>
-      </Box>
+      </Grid>
+    </Box>
 
-        
-    );
+
+  );
 }
 
