@@ -153,7 +153,7 @@ export default function Warhammer() {
 
       </Grid>
 
-        {HTMLArray.forEach((HTMLtemplate) => {
+        {/* {HTMLArray.forEach((HTMLtemplate) => {
           return(
              <Grid item xs={12} sm={10} md={10} sx={{ m: 'auto' }}>
              <CardContent>
@@ -194,9 +194,9 @@ export default function Warhammer() {
                </Item>
              </CardContent>
            </Grid>
-        )})}
+        )})} */}
 
-        {/* <Grid item xs={12} sm={10} md={10} sx={{ m: 'auto' }}>
+        <Grid item xs={12} sm={10} md={10} sx={{ m: 'auto' }}>
           <CardContent>
             <Item>
               <Typography> Objective 1 </Typography>
@@ -314,7 +314,7 @@ export default function Warhammer() {
               </FormControl>
             </Item>
           </CardContent>
-        </Grid> */}
+        </Grid>
 
 
         <Grid item xs={12} sm={6} md={8} sx={{ m: 'auto' }}>
