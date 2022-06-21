@@ -81,7 +81,7 @@ function App() {
     <div className="App">
       <div className="banner">
         <img className="logo" src={Logo}/>
-    <Typography variant="h2" className="Banner-Header">
+    <Typography variant="h3" className="Banner-Header">
       ZENITH HIGHLIGHT
       </Typography>
       </div>
