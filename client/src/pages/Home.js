@@ -3,15 +3,11 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
 import MediaCard from '../components/MediaCard';
-import MediaCardWarhammer from '../components/MediaCardWarhammer';
-import MediaCardKDM from '../components/MediaCardContact';
+
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import MediaCardContact from '../components/MediaCardContact';
-
-// import Carousel1 from '../components/Carousel';
 
 
 
@@ -23,7 +19,6 @@ export default function Home() {
       <Grid container spacing={2}>
         <Grid item sx={8} md={12} lg={12} >
 
-          {/* <Carousel1 /> */}
           <Card>
             <CardMedia
               component="img"
@@ -64,7 +59,7 @@ export default function Home() {
             <MediaCard
                 title="Contact"
                 description=" Connect with me on LinkedIn/Reddit/Github"
-                imageSource="./assets/images/Github.jpg"
+                imageSource="./assets/images/ParadeDaemonPrince1.jpg"
                 linkAddress="/Contact"/>
             </Grid>
           </Grid>
