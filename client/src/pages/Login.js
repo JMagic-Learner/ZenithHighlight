@@ -48,9 +48,7 @@ const Login = (props) => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    if(event.target.id = "change-password") {
-      console.log('You have attempted to change the password');
-    } else {
+   
     console.log('You have submited a login attempt');
     console.log(formState);
     try {
@@ -77,7 +75,7 @@ const Login = (props) => {
     } catch (e) {
       console.error(e);
     }
-  }
+  
     // clear form values
     setFormState({
       email: '',
