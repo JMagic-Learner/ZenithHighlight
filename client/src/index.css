@@ -33,11 +33,12 @@ code {
 /* LOGIN / SIGNUP  */
 
 .card-body {
-  background-color:#ffb300;
+  background-color:whitesmoke;
   padding:1%;
   width:30%;
   margin:auto;
   border-radius:15px;
+  box-shadow:15px;
 }
 .Login-Container {
   width:100%;

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
+import { LOGIN_USER, CHANGE_PASSWORD} from '../utils/mutations';
 import Box from '@mui/material/Box';
 import Auth from '../utils/auth';
 import { Button } from '@mui/material';
-import { createTheme } from '@mui/material/styles';
-import { ThemeProvider } from '@emotion/react';
+import { Typography } from '@mui/material';
+
 
 
 
@@ -16,6 +16,7 @@ import { ThemeProvider } from '@emotion/react';
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
+  const [changePassword] = useMutation(CHANGE_PASSWORD);
   console.log(props)
 
   // update state based on form input changes
@@ -25,6 +26,21 @@ const Login = (props) => {
     setFormState({
       ...formState,
       [name]: value,
+    });
+  };
+
+  const submitNew = async (event) => {
+    const { name, value } = event.target;
+    try {
+      const { data } = await changePassword({
+        variables: { ...formState },
+      });
+    } catch (e) {
+      console.error(e);
+    }
+    setFormState({
+      email: '',
+      password: '',
     });
   };
 
@@ -68,14 +84,14 @@ const Login = (props) => {
   return (
     <Box className="Login-Container">
   
-          <h4>Login</h4>
+          <Typography variant="h4">Login</Typography>
           <Box className="Inner-Container">
           <div className="card-body">
             {data ? (
-              <p>
+              <Typography>
                 Success! You may now head{' '}
                 <Link to="/">back to the homepage.</Link>
-              </p>
+                </Typography>
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <div className="email-login">
@@ -105,6 +121,13 @@ const Login = (props) => {
                   type="submit"
                 >
                   Submit
+                </Button>
+                <Button
+                  id="change-password"
+                  variant="h6"
+                  onClick={submitNew}
+                >
+                  Change Password
                 </Button>
               </form>
             )}

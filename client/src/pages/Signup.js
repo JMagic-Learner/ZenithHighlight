@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
-
+import { Button } from '@mui/material';
+import { Typography } from '@mui/material';
 import Auth from '../utils/auth';
+import Box from '@mui/material/Box';
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -54,10 +56,9 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+    <Box className="Login-Container">
+        <Box className="Inner-Container">
+          <Typography variant="h4" className="card-header bg-dark text-light p-2">Sign Up</Typography>
           <div className="card-body">
             {data ? (
               <p>
@@ -66,6 +67,7 @@ const Signup = () => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
+                <div className="email-login">
                 <input
                   className="form-input"
                   placeholder="Your username"
@@ -74,6 +76,8 @@ const Signup = () => {
                   value={formState.name}
                   onChange={handleChange}
                 />
+                </div>
+                <div className="email-login">
                 <input
                   className="form-input"
                   placeholder="Your email"
@@ -82,6 +86,8 @@ const Signup = () => {
                   value={formState.email}
                   onChange={handleChange}
                 />
+                </div>
+                <div className="email-login">
                 <input
                   className="form-input"
                   placeholder="******"
@@ -90,26 +96,26 @@ const Signup = () => {
                   value={formState.password}
                   onChange={handleChange}
                 />
-                <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
+                </div>
+                <Button
                   type="submit"
+                  color="primary"
                 >
                   Submit
-                </button>
+                </Button>
               </form>
             )}
 
+           
+          </div>
+            </Box>
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
                 <p>An error has been detected</p> 
                 {error.message}
               </div>
             )}
-          </div>
-        </div>
-      </div>
-    </main>
+    </Box>
   );
 };
 

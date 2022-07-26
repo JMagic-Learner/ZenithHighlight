@@ -40,26 +40,26 @@ export default function Home() {
           </Typography>
 
           <Grid container spacing={2}>
-            <Grid item xs={4}>
+            {/* <Grid item xs={4}>
               <MediaCard 
                 title="Infnity"
                 description="A Sci-Fi universe that incorporates cyberpunk , anime , and skirmish gameplay"
                 imageSource="./assets/images/DaofeiExample.jpeg"
                 linkAddress="/Infinity"/>
-            </Grid>
-            <Grid item xs={4}>
+            </Grid> */}
+            <Grid item xs={6}>
              <MediaCard
                 title="Warhammer40k"
                 description="Objective Tracker and Scoring Utility - Nachmund"
                 imageSource="./assets/images/AssaultIntercessor.jpg"
                 linkAddress="/Warhammer"/>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={6}>
             <MediaCard
-                title="Contact"
-                description=" Connect with me on LinkedIn/Reddit/Github"
+                title="Gallery"
+                description=" Gallery"
                 imageSource="./assets/images/ParadeDaemonPrince1.jpg"
-                linkAddress="/Contact"/>
+                linkAddress="/Gallery"/>
             </Grid>
           </Grid>
         </Grid>

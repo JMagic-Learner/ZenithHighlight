@@ -50,6 +50,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addArticle(articleAuthor: String!, articleTitle: String!, articleText1: String!, articleText2: String!, articleText3: String!, articleText4: String!): Article
+    changePassword(username: String!, email:String!, password: String!): User
     #saveEvent(eventId: ID!): User
     #addComment(eventId: ID!, commentText: String!): Event
     # editEventComment(eventId: ID!, commentId: ID, commentText: String): Event

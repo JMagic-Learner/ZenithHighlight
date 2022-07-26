@@ -44,6 +44,24 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    changePassword: async (parent, {username,email,password}) => {
+      console.log("username is " + username);
+      console.log("email is " + username);
+      console.log("password is " + password);
+      const user = await User.findOne({email});
+      return User.findOneAndUpdate(
+        {email},
+        {
+          $addToSet: {
+             password: { password },
+          },
+        },
+        {
+           new: true,
+           runValidators: true,
+        }
+        );
+    },
     addArticle: async (parent, {articleAuthor, articleTitle, articleText1, articleText2, articleText3, articleText4}) => {
       const article = await Article.create({ articleAuthor, articleTitle, articleText1, articleText2, articleText3, articleText4 });
       return article;
