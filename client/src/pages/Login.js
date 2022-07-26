@@ -2,12 +2,21 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-
+import Box from '@mui/material/Box';
 import Auth from '../utils/auth';
+import { Button } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@emotion/react';
+
+
+
+
+
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
+  console.log(props)
 
   // update state based on form input changes
   const handleChange = (event) => {
@@ -57,10 +66,10 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
+    <Box className="Login-Container">
+  
+          <h4>Login</h4>
+          <Box className="Inner-Container">
           <div className="card-body">
             {data ? (
               <p>
@@ -69,6 +78,7 @@ const Login = (props) => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
+                <div className="email-login">
                 <input
                   className="form-input"
                   placeholder="Your email"
@@ -77,33 +87,38 @@ const Login = (props) => {
                   value={formState.email}
                   onChange={handleChange}
                 />
+                </div>
+                <div className="email-login">
                 <input
+                   
                   className="form-input"
                   placeholder="******"
                   name="password"
                   type="password"
                   value={formState.password}
                   onChange={handleChange}
+                  
                 />
-                <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
+                </div>
+                <Button
+                  variant="h6"
                   type="submit"
                 >
                   Submit
-                </button>
+                </Button>
               </form>
             )}
 
-            {error && (
+          
+          </div>
+          </Box>
+          {error && (
               <div className="my-3 p-3 bg-danger text-white">
                 {error.message}
               </div>
             )}
-          </div>
-        </div>
-      </div>
-    </main>
+    </Box>
+
   );
 };
 

@@ -122,7 +122,8 @@ function App() {
               <Article1 />
             </Route>
             <Route exact path="/Login">
-              <Login />
+              <Login 
+              test="test"/>
             </Route>
             <Route exact path="/Signup">
               <Signup />

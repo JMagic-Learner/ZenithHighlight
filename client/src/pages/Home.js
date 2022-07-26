@@ -19,9 +19,9 @@ export default function Home() {
       <Grid container spacing={2}>
         <Grid item sx={8} md={12} lg={12} >
 
-          <Carousel/>
+          {/* <Carousel/> */}
 
-          {/* <Card>
+          <Card>
             <CardMedia
               component="img"
               height sx={8} md={12} lg={12}
@@ -33,7 +33,7 @@ export default function Home() {
                 Recent Works
               </Typography>
             </CardContent>
-          </Card> */}
+          </Card>
 
           <Typography variant="h4">
             <p> Hello, this is a collection of miniatures from artists local to your area</p>

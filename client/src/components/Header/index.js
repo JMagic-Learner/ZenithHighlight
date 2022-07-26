@@ -79,11 +79,6 @@ const Header = () => {
           <ListItem>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Publish">Publish</Button>
           </ListItem>
-          {/* Removing Calendar, we need to narrow our focus */}
-          {/* <ListItem>
-          <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Calendar">Calendar</Button>
-          </ListItem> */}
-         
       </List>
       <Divider />
       <List>
@@ -155,9 +150,6 @@ const Header = () => {
     <Grid item xs={6} md={2}>
           <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Articles">Articles</Button>
     </Grid>
-    {/* <Grid item xs={6} md={2}>
-          <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Publish">Publish</Button>
-    </Grid> */}
     <Grid item xs={6} md={2}>
     <Button color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} href="/Signup">Signup</Button>
     </Grid>
@@ -174,12 +166,6 @@ const Header = () => {
           )}
           
           </Grid>     
-       
-          {/* /* <Button onClick={handleChange} color="inherit" variant="h6" component={Link} sx={{ flexGrow: 1 }} to={"/Gallery"}>Gallery</Button>
-          <Button onClick={refreshPage} color="inherit" variant="h6" component="div" sx={{ flexGrow: 1 }}>Tutorials</Button>
-          <Button onClick={refreshPage} color="inherit" variant="h6" component="div" sx={{ flexGrow: 1 }}>Articles</Button>
-          <Button onClick={refreshPage} color="inherit" variant="h6" component="div" sx={{ flexGrow: 1 }}>Contact</Button>  */} 
-          
           </Router>
         </Toolbar>
       </AppBar>
