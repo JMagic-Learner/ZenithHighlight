@@ -2,9 +2,9 @@ const { ApolloServer } = require('apollo-server-express');
 const {
   ApolloServerPluginDrainHttpServer,
   ApolloServerPluginLandingPageLocalDefault,
-} = require( 'apollo-server-core');
+} = require('apollo-server-core');
 const express = require('express');
-const http =require( 'http');
+const http =require('http');
 const path = require('path');
 const { typeDefs, resolvers } = require('./schemas');
 const { authMiddleware } = require('./utils/auth');
