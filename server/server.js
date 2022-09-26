@@ -1,27 +1,47 @@
-const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
+const {
+  ApolloServerPluginDrainHttpServer,
+  ApolloServerPluginLandingPageLocalDefault,
+} = require( 'apollo-server-core');
+const express = require('express');
+const http =require( 'http');
 const path = require('path');
-
 const { typeDefs, resolvers } = require('./schemas');
 const { authMiddleware } = require('./utils/auth');
-
 const db = require('./config/connection');
+const PORT = process.env.PORT || 4000;
 
-const PORT = process.env.PORT || 3001;
-const app = express();
 // Congigring dotenv to use my key for the NY times search form
 require('dotenv').config();
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  context: authMiddleware,
-});
 
-server.applyMiddleware({ app });
+async function startApolloServer(typeDefs, resolvers) {
+  const app = express();
+  const httpServer = http.createServer(app);
+  const server = new ApolloServer({
+    typeDefs,
+    resolvers,
+    context: authMiddleware,
+    csrfPrevention: true,
+    cache: 'bounded',
+    plugins: [
+      ApolloServerPluginDrainHttpServer({ httpServer }),
+      ApolloServerPluginLandingPageLocalDefault({ embed: true }),
+    ],
+  });
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+
+  await server.start();
+  server.applyMiddleware({
+    app,
+
+    // By default, apollo-server hosts its GraphQL endpoint at the
+    // server root. However, *other* Apollo Server packages host it at
+    // /graphql. Optionally provide this to match apollo-server.
+    path: '/',
+  });
+  app.use(express.urlencoded({ extended: false }));
+  app.use(express.json());
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
@@ -48,3 +68,12 @@ db.once('open', () => {
     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
 });
+
+  // await new Promise(resolve => httpServer.listen({ PORT}, resolve));
+  // console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
+}
+
+
+startApolloServer(typeDefs,resolvers);
+
+
