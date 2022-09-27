@@ -30,7 +30,7 @@ import { ThemeProvider } from '@emotion/react';
 
 
 const httpLink = createHttpLink({
-  uri: 'https://zenithhighlight.herokuapp.com/graphql',
+  uri: '/graphql',
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
